@@ -16,23 +16,23 @@
             <div class="line"></div>
             <p class="front">Front-End Developer</p>
         </div>
-        <nav id="js-nav" class="nav default">
-            <ul id="js-nav-list" class="nav-list">
-                <li id="nav-home" class="nav-item active">
-                    <a href="#home" class="nav-link"><div class="link-content">home</div></a>
-                    <div class="nav-bottom-border"></div>
-                </li>
-                <li id="nav-work" class="nav-item">
-                    <a href="#work" class="nav-link"><div class="link-content">work</div></a>
-                    <div class="nav-bottom-border"></div>
-                </li>
-                <li id="nav-contact" class="nav-item">
-                    <a href="#contact" class="nav-link"><div class="link-content">contact</div></a>
-                    <div class="nav-bottom-border"></div>
-                </li>
-            </ul>
-        </nav>
     </header>
+    <nav id="js-nav" class="nav default">
+        <ul id="js-nav-list" class="nav-list">
+            <li id="nav-home" class="nav-item active">
+                <a href="#home" class="nav-link"><div class="link-content">home</div></a>
+                <div class="nav-bottom-border"></div>
+            </li>
+            <li id="nav-work" class="nav-item">
+                <a href="#work" class="nav-link"><div class="link-content">work</div></a>
+                <div class="nav-bottom-border"></div>
+            </li>
+            <li id="nav-contact" class="nav-item">
+                <a href="#contact" class="nav-link"><div class="link-content">contact</div></a>
+                <div class="nav-bottom-border"></div>
+            </li>
+        </ul>
+    </nav>
     <div id="work" class="work">
         <hr class="hr big-hr">
         <div class="portfolio-item">
@@ -95,18 +95,18 @@
             <hr class="hr">
             <div class="contact-form">
                 <h2 class="section-title">Get in touch</h2>
-                <form>
+                <form action="">
                     <div class="contact-info-name">
-                        <label for="form-name"><span class="contact-label">Name</span>
-                        <input id="form-name" class="contact-input" type="text" name="name"></label>
+                        <label for="form-name" class="contact-label">Name</label>
+                        <input id="form-name" class="contact-input" type="text" name="name">
                     </div>
                     <div class="contact-info-name">
-                        <label for="form-email"><span class="contact-label">Email</span>
-                        <input id="form-email" class="contact-input" type="email" name="_replyto" required></label>
+                        <label for="form-email" class="contact-label">Email</label>
+                        <input id="form-email" class="contact-input" type="email" name="_replyto" required>
                     </div>
                     <div class="contact-info-name contact-info-text">
-                        <label for="form-message"><span class="contact-label">Message</span>
-                        <textarea id="form-message" class="contact-input-text" name="message" required></textarea></label>
+                        <label for="form-message" class="contact-label">Message</label>
+                        <textarea id="form-message" class="contact-input-text" name="message" required></textarea>
                     </div>
                     <p id="js-form-submit-msg" class="description">Thanks for your message, I will try to respond as soon as possible.</p>
                     <button id="js-form-submit" type="submit" class="main-button">Send</button>
@@ -123,7 +123,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/main.js"></script>
     
-    <script>
+    <script async>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
