@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Andrius Kvedaras - Front-end developer</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header id="home" class="header">
+        <h1 class="name">
+            <div class="first-name">Andrius</div>
+            <div class="last-name">Kvedaras</div>
+        </h1>
+        <div class="line"></div>
+        <h3 class="front">Front-End Developer</h3>
+    </header>
+    <nav id="js-nav" class="nav default">
+        <ul id="js-nav-list" class="nav-list">
+            <li id="nav-home" class="nav-item active">
+                <a href="#home" class="nav-link"><div class="link-content">home</div></a>
+                <div class="nav-bottom-border"></div>
+            </li>
+            <li id="nav-work" class="nav-item">
+                <a href="#work" class="nav-link"><div class="link-content">work</div></a>
+                <div class="nav-bottom-border"></div>
+            </li>
+            <li id="nav-contact" class="nav-item">
+                <a href="#contact" class="nav-link"><div class="link-content">contact</div></a>
+                <div class="nav-bottom-border"></div>
+            </li>
+        </ul>
+    </nav>
+    <main id="work" class="work">
+        <hr class="hr big-hr">
+        <div class="portfolio-item">
+            <a href="https://chrome.google.com/webstore/detail/initium/jmefobebfekofkbpfmjkmhjgaaaojkml">
+                <img class="work-image" alt="screenshot of the project"
+                src="images/work/work1.jpg"
+                srcset="images/work/work1.768.jpg 768w, images/work/work1.jpg 1024w"
+                sizes="50vw">
+            </a>
+            <div class="description-container">
+                <div>
+                    <a href="https://chrome.google.com/webstore/detail/initium/jmefobebfekofkbpfmjkmhjgaaaojkml" target="_blank">
+                        <h2 class="work-title">Initium</h2>
+                    </a>
+                    <p class="description">Initium is a Google Chrome extension that replaces Chrome's new tab page with additional features.</p>
+               </div>
+                <span class="section-title">Technologies</span>
+                <ul class="skills">
+                    <li class="skill">AngularJs</li>
+                    <li class="skill">SASS</li>
+                    <li class="skill">Chrome Extension</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="hr">
+        <div class="portfolio-item">
+            <a href="https://vocem.herokuapp.com">
+                <img class="work-image" alt="screenshot of the project"
+                src="images/work/work2.jpg"
+                srcset="images/work/work2.768.jpg 768w, images/work/work2.jpg 1024w"
+                sizes="50vw">
+            </a>
+            <div class="description-container">
+                <div>
+                    <a href="https://vocem.herokuapp.com">
+                        <h2 class="work-title">Vocem</h2>
+                    </a>
+                    <p class="description">Vocem is a custom polls platform with live results.</p>
+                </div>
+                <span class="section-title">Technologies</span>
+                <ul class="skills">
+                    <li class="skill">MEAN stack</li>
+                    <li class="skill">Socket.io</li>
+                    <li class="skill">SASS</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="hr">
+        <div class="portfolio-item">
+            <a href="http://andriuskv.github.io/Image-resizer">
+                <img class="work-image" alt="screenshot of the project"
+                src="images/work/work3.png"
+                srcset="images/work/work3.768.png 768w, images/work/work3.png 1024w"
+                sizes="50vw">
+            </a>
+            <div class="description-container">
+                <div>
+                    <a href="http://andriuskv.github.io/Image-resizer">
+                        <h2 class="work-title">Image resizer</h2>
+                    </a>
+                    <p class="description">Image resizer is a simple tool to resize images. It allows to specify custom image's dimensions while maintaining its aspect ratio.</p>
+                </div>
+                <span class="section-title">Technologies</span>
+                <ul class="skills">
+                    <li class="skill">Web Workers</li>
+                    <li class="skill">SASS</li>
+                    <li class="skill">JSZip</li>
+                </ul>
+            </div>
+        </div>
+    </main> <!-- end of work-->
+    <div id="contact" class="contact-wraper">
+        <div class="contact">
+            <div class="about">
+                <h2 class="section-title">About me</h2>
+                <p class="description">I'm 23 year old self-taught Front End developer from Lithuania. I'm persistent problem solver, constantly seeking out new knowledge to expand my skill set.</p>
+                <div class="about-button-wrap">
+                    <a href="resume.pdf"><button class="btn">Download Resume</button></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2 class="section-title">Get in touch</h2>
+                <form id="form">
+                    <div class="contact-info-name">
+                        <label for="form-name" class="contact-label">Name</label>
+                        <input id="form-name" class="contact-input" type="text" name="name">
+                    </div>
+                    <div class="contact-info-name">
+                        <label for="form-email" class="contact-label">Email</label>
+                        <input id="form-email" class="contact-input" type="email" name="_replyto" required>
+                    </div>
+                    <div class="contact-info-name contact-info-text">
+                        <label for="form-message" class="contact-label">Message</label>
+                        <textarea id="form-message" class="contact-input-text" name="message" required></textarea>
+                    </div>
+                    <p id="js-form-submit-msg" class="description">Thanks for your message, I will try to respond as soon as possible.</p>
+                    <button type="submit" id="js-form-submit" class="btn">Send</button>
+                </form>
+                <div class="social-icon-wrap">
+                    <a href="mailto:ikandrius@gmail.com" title="Email" target="_blank">
+                        <div class="icon icon-mail-squared"></div>
+                    </a>
+                    <a href="https://github.com/andriuskv" title="GitHub" target="_blank">
+                        <div class="icon icon-github-squared"></div>
+                    </a>
+                    <a href="https://www.linkedin.com/profile/view?id=422865410" title="LinkedIn" target="_blank">
+                        <div class="icon icon-linkedin-squared"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-66661807-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
