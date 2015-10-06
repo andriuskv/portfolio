@@ -31,7 +31,7 @@ gulp.task("build:js", function() {
 });
 
 gulp.task("build:css", ["sass"], function() {
-    return gulp.src("src/scss/*.scss")
+    return gulp.src("src/css/main.css")
         .pipe(csso())
         .pipe(gulp.dest("dist/css"));
 });
