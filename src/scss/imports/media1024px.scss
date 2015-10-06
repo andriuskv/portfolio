@@ -1,0 +1,45 @@
+@media screen and (max-width: 1024px) {
+
+    .header { background-image: url(../images/hero.1024.jpg); }
+
+    .name { letter-spacing: 6px; }
+
+    .first-name { font-size: 56px; }
+
+    .last-name { font-size: 64px; }
+
+    .front { letter-spacing: 3px; }
+
+    .nav-item {
+        &:hover {
+            .nav-bottom-border { width: 0; }
+        }
+    }
+
+    .nav-link:hover { color: #fff; }
+
+    .big-hr { margin: 62px 2% 22px 2%; }
+
+    .work-title { font-size: 34px; }
+
+    .portfolio-item { width: 90%; }
+
+    .description {
+        padding: 2% 0;
+        font-size: 14px;
+    }
+
+    .description-container { width: 44%; }
+
+    .btn:hover { background-color: $main-color; }
+
+    .icon:hover { color: $main-color; }
+
+    .about { width: 54%; }
+
+    .contact-wraper {
+        min-height: 100%;
+        background: url(../images/footer.1024.jpg);
+        background-size: 100% 100%;
+    }
+}

@@ -1,0 +1,26 @@
+@media screen and (max-width: 360px) {
+	.nav-fixed {
+		position: absolute;
+		top: auto;
+	    bottom: 0;
+	    background-color: rgba(0,0,0,.4);
+	}
+
+	.about { padding-top: 10px; }
+
+	.icon-mail-squared { background: url("../images/icons/envelope-square.png"); }
+	.icon-linkedin-squared { background: url("../images/icons/linkedin-square.png"); }
+	.icon-github-squared { background: url("../images/icons/github-square.png"); }
+
+	.icon {
+	    vertical-align: top;
+	    width: 32px;
+	    height: 36px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.icon-mail-squared:before { content: ""; }
+	.icon-linkedin-squared:before { content: ""; }
+	.icon-github-squared:before { content: ""; }
+}

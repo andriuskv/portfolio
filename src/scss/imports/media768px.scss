@@ -1,0 +1,88 @@
+@media screen and (max-width: 768px) {
+    
+    .name { letter-spacing: 4px; }
+
+    .first-name { font-size: 50px; }
+
+    .last-name { font-size: 58px; }
+    
+    .line { width: 320px; }
+    
+    .front { 
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+    
+    .nav {  height: 40px; }
+    
+    .nav-list { height: 40px; }
+    
+    .nav-item { height: 40px; }
+    
+    .link-content {
+        padding: 0 16px;
+        font-size: 12px;
+        line-height: 3;
+    }
+
+    .big-hr { margin: 42px 2% 22px 2%; }
+    
+    .work { margin-top: -40px; }
+    
+    .contact { width: 90%; }
+    
+    .work-image, .description-container {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .description-container {
+        margin-top: 6px;
+
+        .section-title { font-size: 16px; }
+    }
+
+    .skills { margin-top: 4px; }
+    
+    .skill {
+        display: inline-block;
+        width: inherit;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .about {
+        width: 50%;
+        
+        .description { padding: 0; }
+    }
+    
+    .contact-wraper {
+        height: auto;
+        background: #FFEBD7;
+    }
+    
+    .about, .contact-form { padding-top: 44px; }
+    
+    .contact-form { width: 50%; }
+    
+    .contact-info-name { margin-bottom: 14px; }
+
+    .contact-input {
+        height: 24px;
+        font-size: 16px;
+    }
+
+    .contact-input-text { height: 100px; }
+
+    .social-icon-wrap { padding-bottom: 8px; }
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .name {
+        margin-top: 40%;
+    }
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .name {
+        margin-top: 10%;
+    }
+}

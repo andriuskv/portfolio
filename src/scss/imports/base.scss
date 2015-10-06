@@ -1,0 +1,43 @@
+$main-color: #35b88f;
+$main-font-family: "Open Sans", sans-serif;
+
+html, body {
+    height: 100%;
+}
+ *, *:before, *:after {
+     box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+%button {
+    padding: 4px 10px;
+    background-color: $main-color;
+    border-radius: 2px;
+    color: #FFEBD7;
+    font-family: $main-font-family;
+}
+%btn-interaction {
+    &:active { transform: scale(.94); }
+}
+%secion-title {
+    color: rgb(100, 100, 100);
+    font-weight: 600;
+    font-family: $main-font-family;
+}
+.hr {
+    margin: 18px 20% 20px 20%;
+    border: 1px solid $main-color;
+}
+
+.big-hr:last-child { margin: 2% 5%; }
+
+.btn {
+    @extend %button;
+    @extend %btn-interaction;
+
+    border: 0;
+    cursor: pointer;
+
+    &:hover { background-color: #2A9372; }
+}
