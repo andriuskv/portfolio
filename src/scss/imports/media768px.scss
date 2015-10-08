@@ -25,56 +25,57 @@
         line-height: 3;
     }
 
-    .big-hr { margin: 42px 2% 22px 2%; }
+    .hr { margin: 40px 2% 20px 2%; }
     
     .work { margin-top: -40px; }
     
-    .contact { width: 90%; }
+    .portfolio-item {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid $main-color;
+        
+        &:last-of-type {
+            padding-bottom: 0;
+            border-width: 0;
+        }
+        
+        &::after { display: none; }
+    }
     
     .work-image, .description-container {
         display: block;
         width: 100%;
         margin: 0 auto;
     }
-    .description-container {
-        margin-top: 6px;
-
-        .section-title { font-size: 16px; }
-    }
-
-    .skills { margin-top: 4px; }
     
-    .skill {
-        display: inline-block;
-        width: inherit;
-        margin-top: 0;
-        margin-left: 0;
-    }
-    .about {
-        width: 50%;
+    .description-container { margin-top: 10px; }
         
-        .description { padding: 0; }
+    .contact-wraper { background: none; }
+    
+    .contact { width: 90%; }
+    
+    .about, .contact-form {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
     }
     
-    .contact-wraper {
-        height: auto;
-        background: #FFEBD7;
+    .about {
+        padding-top: 44px;
+        
+        .btn { float: none; }
     }
-    
-    .about, .contact-form { padding-top: 44px; }
-    
-    .contact-form { width: 50%; }
-    
-    .contact-info-name { margin-bottom: 14px; }
-
-    .contact-input {
-        height: 24px;
+    .contact-form {
+        float: none;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 2px solid $main-color;
         font-size: 16px;
     }
-
-    .contact-input-text { height: 100px; }
-
-    .social-icon-wrap { padding-bottom: 8px; }
+    
+    .contact-form {
+        .btn { padding: 4px 20px; }
+    }
 }
 @media screen and (max-width: 768px) and (orientation: portrait) {
     .name {
