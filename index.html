@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
     <header id="home" class="header">
@@ -36,8 +36,8 @@
         </ul>
     </nav>
     <main id="work" class="work">
-        <hr class="hr big-hr">
-        <div class="portfolio-item">
+        <hr class="hr">
+        <section class="portfolio-item">
             <a href="https://chrome.google.com/webstore/detail/initium/jmefobebfekofkbpfmjkmhjgaaaojkml">
                 <img class="work-image" alt="screenshot of the project"
                 src="images/work/work1.jpg"
@@ -45,22 +45,19 @@
                 sizes="50vw">
             </a>
             <div class="description-container">
-                <div>
-                    <a href="https://chrome.google.com/webstore/detail/initium/jmefobebfekofkbpfmjkmhjgaaaojkml" target="_blank">
-                        <h2 class="work-title">Initium</h2>
-                    </a>
-                    <p class="description">Initium is a Google Chrome extension that replaces Chrome's new tab page with additional features.</p>
-               </div>
-                <span class="section-title">Technologies</span>
+                <a href="https://chrome.google.com/webstore/detail/initium/jmefobebfekofkbpfmjkmhjgaaaojkml" target="_blank">
+                    <h2 class="work-title">Initium</h2>
+                </a>
+                <p class="description">Initium is a Google Chrome extension that replaces Chrome's new tab page with additional features.</p>
+                <div class="skill-title">Technologies</div>
                 <ul class="skills">
                     <li class="skill">AngularJs</li>
                     <li class="skill">SASS</li>
                     <li class="skill">Chrome Extension</li>
                 </ul>
             </div>
-        </div>
-        <hr class="hr">
-        <div class="portfolio-item">
+        </section>
+        <section class="portfolio-item">
             <a href="https://vocem.herokuapp.com">
                 <img class="work-image" alt="screenshot of the project"
                 src="images/work/work2.jpg"
@@ -68,22 +65,19 @@
                 sizes="50vw">
             </a>
             <div class="description-container">
-                <div>
-                    <a href="https://vocem.herokuapp.com">
-                        <h2 class="work-title">Vocem</h2>
-                    </a>
-                    <p class="description">Vocem is a custom polls platform with live results.</p>
-                </div>
-                <span class="section-title">Technologies</span>
+                <a href="https://vocem.herokuapp.com">
+                    <h2 class="work-title">Vocem</h2>
+                </a>
+                <p class="description">Vocem is a custom polls platform with live results.</p>
+                <div class="skill-title">Technologies</div>
                 <ul class="skills">
                     <li class="skill">MEAN stack</li>
                     <li class="skill">Socket.io</li>
                     <li class="skill">SASS</li>
                 </ul>
             </div>
-        </div>
-        <hr class="hr">
-        <div class="portfolio-item">
+        </section>
+        <section class="portfolio-item">
             <a href="http://andriuskv.github.io/Image-resizer">
                 <img class="work-image" alt="screenshot of the project"
                 src="images/work/work3.png"
@@ -91,29 +85,26 @@
                 sizes="50vw">
             </a>
             <div class="description-container">
-                <div>
-                    <a href="http://andriuskv.github.io/Image-resizer">
-                        <h2 class="work-title">Image resizer</h2>
-                    </a>
-                    <p class="description">Image resizer is a simple tool to resize images. It allows to specify custom image's dimensions while maintaining its aspect ratio.</p>
-                </div>
-                <span class="section-title">Technologies</span>
+                <a href="http://andriuskv.github.io/Image-resizer">
+                    <h2 class="work-title">Image resizer</h2>
+                </a>
+                <p class="description">Image resizer is a simple tool to resize images. It allows to specify custom image's dimensions while maintaining its aspect ratio.</p>
+                <div class="skill-title">Technologies</div>
                 <ul class="skills">
                     <li class="skill">Web Workers</li>
                     <li class="skill">SASS</li>
                     <li class="skill">JSZip</li>
                 </ul>
             </div>
-        </div>
+        </section>
+        <hr class="hr">
     </main> <!-- end of work-->
     <div id="contact" class="contact-wraper">
         <div class="contact">
             <div class="about">
                 <h2 class="section-title">About me</h2>
                 <p class="description">I'm 23 year old self-taught Front End developer from Lithuania. I'm persistent problem solver, constantly seeking out new knowledge to expand my skill set.</p>
-                <div class="about-button-wrap">
-                    <a href="resume.pdf"><button class="btn">Download Resume</button></a>
-                </div>
+                <a href="resume.pdf"><button class="btn">Download Resume</button></a>
             </div>
             <div class="contact-form">
                 <h2 class="section-title">Get in touch</h2>
@@ -155,7 +146,6 @@
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
         ga('create', 'UA-66661807-1', 'auto');
         ga('send', 'pageview');
     </script>

@@ -144,6 +144,9 @@ textarea {
 html, body {
   height: 100%; }
 
+body {
+  background-color: #FFEBD7; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -155,24 +158,18 @@ a {
   background-color: #35b88f;
   border-radius: 2px;
   color: #FFEBD7;
-  font-family: "Open Sans", sans-serif; }
+  font-family: sans-serif;
+  font-size: 14px; }
 
 .btn:active, .icon:active {
   -webkit-transform: scale(0.94);
       -ms-transform: scale(0.94);
           transform: scale(0.94); }
 
-.work-title, .section-title {
+.work-title, .skill-title, .section-title {
   color: #646464;
   font-weight: 600;
-  font-family: "Open Sans", sans-serif; }
-
-.hr {
-  margin: 18px 20% 20px 20%;
-  border: 1px solid #35b88f; }
-
-.big-hr:last-child {
-  margin: 2% 5%; }
+  font-family: sans-serif; }
 
 .btn {
   border: 0;
@@ -263,7 +260,7 @@ a {
 
 .link-content {
   padding: 0 20px;
-  font-family: "Open Sans", sans-serif;
+  font-family: sans-serif;
   font-size: 14px;
   line-height: 4;
   text-transform: uppercase; }
@@ -272,12 +269,27 @@ a {
 
 .work {
   margin-top: -60px;
-  background-color: #FFEBD7;
   padding: 20px 0; }
 
+.hr {
+  margin: 60px 2% 20px 2%;
+  border: 1px solid #35b88f; }
+  .hr:last-of-type {
+    margin-top: 20px;
+    margin-bottom: 0; }
+
 .portfolio-item {
-  width: 80%;
+  width: 90%;
   margin: 0 auto; }
+  .portfolio-item::after {
+    content: "";
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    border-bottom: 2px solid #35b88f; }
+  .portfolio-item:last-of-type::after {
+    margin: 0;
+    border-bottom: none; }
 
 .work-image {
   vertical-align: top;
@@ -287,15 +299,12 @@ a {
 
 .description-container {
   display: inline-block;
-  width: 38%; }
-  .description-container .section-title {
-    font-size: 16px;
-    border-bottom: 2px solid #35b88f; }
+  width: 44%; }
 
 .work-title {
   display: inline-block;
   margin: 0;
-  font-size: 38px;
+  font-size: 36px;
   line-height: 1;
   border-bottom: 2px solid #35b88f; }
   .work-title:hover {
@@ -303,8 +312,12 @@ a {
 
 .description {
   margin: 0;
-  padding: 4% 0;
+  padding: 10px 0;
   color: #646464; }
+
+.skill-title {
+  display: inline-block;
+  border-bottom: 2px solid #35b88f; }
 
 .skills {
   list-style: none;
@@ -313,113 +326,94 @@ a {
   padding: 0; }
 
 .skill {
-  width: 96px;
+  display: inline-block;
   margin-top: 4px;
-  margin-left: 4px;
-  font-size: 12px;
   text-align: center; }
 
-.big-hr {
-  margin: 60px 5% 20px 5%; }
-
 .contact-wraper {
+  height: 100%;
   min-height: 100%;
   background: url(../images/footer.jpg);
   background-size: 100% 100%; }
 
 .contact {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 80%;
-  margin: 0 auto;
-  border-top: 2px solid #35b88f; }
+  height: 100%;
+  margin: 0 auto; }
+  .contact .description {
+    padding: 0; }
 
 .about {
-  float: left;
-  width: 40%; }
+  width: 48%; }
   .about .description {
-    margin: 0;
-    padding: 0;
-    color: #646464;
-    line-height: 1.2; }
-
-.about-button-wrap .btn {
-  margin-top: 10px;
-  font-size: 12px; }
+    text-align: left; }
+  .about .btn {
+    float: left;
+    margin-top: 10px; }
 
 .about, .contact-form {
-  padding-top: 64px; }
-  .about .section-title, .contact-form .section-title {
-    text-align: center; }
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 20%;
+  text-align: center; }
 
 .section-title {
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 10px;
   font-size: 28px; }
 
-.section-title, .contact-label {
+.contact-label {
   text-align: left; }
 
 .contact-form {
   float: right;
   width: 260px;
-  text-align: right;
-  font-size: 14px; }
+  text-align: center; }
   .contact-form .description {
     display: none;
-    width: 80%;
     margin: 0 auto;
-    padding: 0;
-    padding-left: 5%;
-    text-align: center;
-    font-size: 10px; }
+    font-size: 12px; }
     .contact-form .description.show {
       display: block; }
   .contact-form .btn.hide {
     display: none; }
 
 .contact-info-name {
-  display: inline-block;
-  width: 90%;
+  width: 100%;
+  margin: 0 auto;
   margin-bottom: 10px; }
 
 .contact-label {
   display: block;
   margin-bottom: 2px;
   color: #646464;
-  font-family: "Open Sans", sans-serif; }
+  font-family: sans-serif;
+  font-size: 14px; }
 
 .contact-input, .contact-input-text {
-  height: 20px;
+  height: 24px;
   width: 100%;
   padding: 2px;
-  background-color: rgba(0, 0, 0, 0.6);
   border: 1px solid #35b88f;
+  outline: 0;
   border-radius: 2px;
-  font-family: sans-serif;
+  background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
-  font-size: 14px;
-  outline: 0; }
+  font-size: 16px; }
 
 .contact-input-text {
+  vertical-align: top;
+  display: block;
   height: 100px;
   resize: none;
   overflow: hidden; }
 
 .social-icon-wrap {
-  width: 90%;
-  margin-top: 12px;
-  margin-left: 10%;
-  padding-top: 8px;
-  border-top: 2px solid #35b88f;
-  text-align: center;
-  line-height: 1; }
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-top: 5px;
+  border-top: 2px solid #35b88f; }
 
 .icon {
   display: inline-block;
@@ -484,25 +478,11 @@ a {
     width: 0; }
   .nav-link:hover {
     color: #fff; }
-  .big-hr {
-    margin: 62px 2% 22px 2%; }
-  .work-title {
-    font-size: 34px; }
-  .portfolio-item {
-    width: 90%; }
-  .description {
-    padding: 2% 0;
-    font-size: 14px; }
-  .description-container {
-    width: 44%; }
   .btn:hover {
     background-color: #35b88f; }
   .icon:hover {
     color: #35b88f; }
-  .about {
-    width: 54%; }
   .contact-wraper {
-    min-height: 100%;
     background: url(../images/footer.1024.jpg);
     background-size: 100% 100%; } }
 
@@ -528,47 +508,45 @@ a {
     padding: 0 16px;
     font-size: 12px;
     line-height: 3; }
-  .big-hr {
-    margin: 42px 2% 22px 2%; }
+  .hr {
+    margin: 40px 2% 20px 2%; }
   .work {
     margin-top: -40px; }
-  .contact {
-    width: 90%; }
+  .portfolio-item {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #35b88f; }
+    .portfolio-item:last-of-type {
+      padding-bottom: 0;
+      border-width: 0; }
+    .portfolio-item::after {
+      display: none; }
   .work-image, .description-container {
     display: block;
     width: 100%;
     margin: 0 auto; }
   .description-container {
-    margin-top: 6px; }
-    .description-container .section-title {
-      font-size: 16px; }
-  .skills {
-    margin-top: 4px; }
-  .skill {
-    display: inline-block;
-    width: inherit;
-    margin-top: 0;
-    margin-left: 0; }
-  .about {
-    width: 50%; }
-    .about .description {
-      padding: 0; }
+    margin-top: 10px; }
   .contact-wraper {
-    height: auto;
-    background: #FFEBD7; }
+    background: none; }
+  .contact {
+    width: 90%; }
   .about, .contact-form {
+    display: block;
+    width: 100%;
+    margin: 0 auto; }
+  .about {
     padding-top: 44px; }
+    .about .btn {
+      float: none; }
   .contact-form {
-    width: 50%; }
-  .contact-info-name {
-    margin-bottom: 14px; }
-  .contact-input, .contact-input-text {
-    height: 24px;
+    float: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 2px solid #35b88f;
     font-size: 16px; }
-  .contact-input-text {
-    height: 100px; }
-  .social-icon-wrap {
-    padding-bottom: 8px; } }
+  .contact-form .btn {
+    padding: 4px 20px; } }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .name {
@@ -589,46 +567,12 @@ a {
     font-size: 50px; }
   .line {
     width: 260px; }
-  .hr {
-    margin: 10px 15%; }
-  .big-hr {
-    margin: 32px 2% 12px 2%; }
   .work {
-    padding-bottom: 10px; }
+    padding-bottom: 0; }
   .work-title {
-    font-size: 30px; }
-  .skills {
-    margin-top: 2px; }
-  .skill {
-    margin-top: 4px; }
-  .contact {
-    display: block; }
+    font-size: 26px; }
   .section-title {
-    margin-bottom: 8px;
-    font-size: 20px; }
-  .about, .contact-form {
-    float: none;
-    display: block;
-    margin: 0 auto; }
-  .about {
-    width: 100%; }
-    .about .description {
-      line-height: 1; }
-  .about-button-wrap {
-    text-align: center; }
-    .about-button-wrap .btn {
-      padding: 6px 10px; }
-  .contact-form {
-    width: 98%;
-    margin-top: 12px;
-    padding-top: 10px;
-    border-top: 2px solid #35b88f;
-    font-size: 16px;
-    text-align: center; }
-    .contact-form .description {
-      padding-left: 0; }
-  .social-icon-wrap {
-    margin: 12px  auto 0 auto; } }
+    font-size: 24px; } }
 
 @media screen and (max-width: 360px) {
   .nav-fixed {

@@ -9,53 +9,10 @@
     .last-name { font-size: 50px; }
 
     .line { width: 260px; }
+    
+    .work { padding-bottom: 0; }
 
-    .hr { margin: 10px 15%; }
+    .work-title { font-size: 26px; }
 
-    .big-hr { margin: 32px 2% 12px 2%; }
-
-    .work { padding-bottom: 10px; }
-
-    .work-title { font-size: 30px; }
-
-    .skills { margin-top: 2px; }
-
-    .skill { margin-top: 4px; }
-
-    .contact { display: block; }
-
-    .section-title {
-        margin-bottom: 8px;
-        font-size: 20px;
-    }
-    .about, .contact-form {
-        float: none;
-        display: block;
-        margin: 0 auto;
-    }
-
-    .about {
-        width: 100%;
-
-        .description { line-height: 1; }
-    }
-
-    .about-button-wrap {
-        text-align: center;
-
-        .btn { padding: 6px 10px; }
-    }
-    .contact-form {
-        width: 98%;
-        margin-top: 12px;
-        padding-top: 10px;
-        border-top: 2px solid $main-color;
-        font-size: 16px;
-        text-align: center;
-
-        .description { padding-left: 0; }
-
-    }
-
-    .social-icon-wrap { margin: 12px  auto 0 auto; }
+    .section-title { font-size: 24px; }
 }

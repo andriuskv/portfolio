@@ -1,21 +1,22 @@
 $main-color: #35b88f;
-$main-font-family: "Open Sans", sans-serif;
+$main-font-family: sans-serif;
 
-html, body {
-    height: 100%;
+html, body { height: 100%; }
+
+body {
+    background-color: #FFEBD7;
 }
- *, *:before, *:after {
-     box-sizing: border-box;
-}
-a {
-    text-decoration: none;
-}
+ *, *:before, *:after { box-sizing: border-box; }
+
+a { text-decoration: none; }
+
 %button {
     padding: 4px 10px;
     background-color: $main-color;
     border-radius: 2px;
     color: #FFEBD7;
     font-family: $main-font-family;
+    font-size: 14px;
 }
 %btn-interaction {
     &:active { transform: scale(.94); }
@@ -25,12 +26,6 @@ a {
     font-weight: 600;
     font-family: $main-font-family;
 }
-.hr {
-    margin: 18px 20% 20px 20%;
-    border: 1px solid $main-color;
-}
-
-.big-hr:last-child { margin: 2% 5%; }
 
 .btn {
     @extend %button;
