@@ -2,38 +2,15 @@
 "use strict";
 
 (function () {
-    var currentSection = "";
-
-    function toggleClass(id) {
-        var element = $(id),
-            home = $("#nav-home"),
-            work = $("#nav-work"),
-            contact = $("#nav-contact");
-
-        home.removeClass().addClass("nav-item");
-        work.removeClass().addClass("nav-item");
-        contact.removeClass().addClass("nav-item");
-
-        element.addClass("active");
-    }
-    function toggleNavClass(section) {
-        var nav = $("#js-nav");
-
-        nav.removeClass().addClass("nav");
-
-        if (section === "work" || section === "contact") {
-            nav.addClass("nav-fixed");
-        }
-        else {
-            nav.addClass("default");
-        }
-    }
-    function onScroll() {
-        var currentPos = $(document).scrollTop(),
-            homeOffset = $("#home").offset().top,
-            workOffset = $("#work").offset().top,
-            contactOffset = $("#contact").offset().top;
-
+    var homeOffset = $("#home").offset().top,
+        workOffset = $("#work").offset().top,
+        contactOffset = $("#contact").offset().top,
+        currentSection = "",
+        ticking = false;
+    
+    function update() {
+        var currentPos = window.pageYOffset;
+        
         if (currentSection !== "home" && currentPos > homeOffset && currentPos < workOffset) {
             toggleClass("#nav-home");
             currentSection = "home";
@@ -46,11 +23,39 @@
             toggleClass("#nav-contact");
             currentSection = "contact";
         }
-
+        
         toggleNavClass(currentSection);
+        ticking = false;
     }
+    
+    function toggleClass(id) {
+        $("#nav-home").removeClass().addClass("nav-item");
+        $("#nav-work").removeClass().addClass("nav-item");
+        $("#nav-contact").removeClass().addClass("nav-item");
+        $(id).addClass("active");
+    }
+    
+    function toggleNavClass(section) {
+        var nav = $("#js-nav");
 
-    onScroll();
+        nav.removeClass().addClass("nav");
+
+        if (section === "work" || section === "contact") {
+            nav.addClass("nav-fixed");
+        }
+        else {
+            nav.addClass("default");
+        }
+    }
+    
+    function onScroll() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        
+        ticking = true;
+    }
+    
     window.addEventListener("scroll", onScroll, false);
 })();
 
@@ -71,12 +76,13 @@
 })();
 
 (function() {
-    var submitBtn = $("#js-form-submit");
+    var $submit = $("#js-form-submit");
 
     function toggleSubmitMsg() {
         $("#js-form-submit-msg").toggle("show");
-        submitBtn.toggle("hide");
+        $submit.toggle("hide");
     }
+    
     function getForm(form) {
         return {
             name: form.name.value || "",
@@ -84,11 +90,13 @@
             message: form.message.value
         };
     }
+    
     function checkIfValid(form) {
         var email = form._replyto.value;
 
         return !!form.message.value && !!email && /@/.test(email);
     }
+    
     function sendMessage(form) {
         $.ajax({
             cache: false,
@@ -100,7 +108,7 @@
             toggleSubmitMsg();
 
             setTimeout(function() {
-                submitBtn.html("Send");
+                $submit.html("Send");
                 toggleSubmitMsg();
             }, 5000);
 
@@ -109,12 +117,13 @@
             }
         });
     }
+    
     function submitForm() {
         var form = document.getElementById("form"),
             valid = form.checkValidity ? form.checkValidity() : checkIfValid(form);
 
         if (valid) {
-            submitBtn.html("Sending");
+            $submit.html("Sending");
             sendMessage(form);
             return false;
         }
@@ -122,5 +131,6 @@
             return false;
         }
     }
-    submitBtn.on("click", submitForm);
+    
+    $submit.on("click", submitForm);
 })();

@@ -9,7 +9,7 @@ var sass = require('gulp-sass');
 var imagemin = require("gulp-imagemin");
 
 gulp.task("default", ["watch"]);
-gulp.task("build", ["build:js", "build:css", "build:html", "build:images", "build:fonts"]);
+gulp.task("build", ["build:js", "build:css", "build:html", "build:images", "build:fonts", "build:favicon"]);
 
 gulp.task("sass", function() {
     return gulp.src("src/scss/*.scss")
@@ -42,7 +42,7 @@ gulp.task("build:html", function() {
 });
 
 gulp.task("build:images", function() {
-    return gulp.src(["src/images/*", "images/**/*"])
+    return gulp.src(["src/images/*", "src/images/*/*"])
         .pipe(imagemin({
             optimizationLevel: 7,
             progressive: true,
@@ -54,6 +54,10 @@ gulp.task("build:images", function() {
 gulp.task("build:fonts", function() {
     return gulp.src("src/fonts/*")
         .pipe(gulp.dest("dist/fonts"));
+});
+gulp.task("build:favicon", function() {
+    return gulp.src("src/favicon.ico")
+        .pipe(gulp.dest("dist"));
 });
 
 gulp.task("watch", function() {
