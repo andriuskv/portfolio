@@ -55,8 +55,14 @@ gulp.task("build:fonts", function() {
     return gulp.src("src/fonts/*")
         .pipe(gulp.dest("dist/fonts"));
 });
+
 gulp.task("build:favicon", function() {
     return gulp.src("src/favicon.ico")
+        .pipe(gulp.dest("dist"));
+});
+
+gulp.task("build:resume", function() {
+    return gulp.src("src/resume.pdf")
         .pipe(gulp.dest("dist"));
 });
 
