@@ -1,108 +1,35 @@
-.contact-wraper {
-    height: 100%;
-    min-height: 100%;
-    background: url(../images/footer.jpg);
-    background-size: 100% 100%;
-}
-
-.contact {
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
-    
-    .description { padding: 0; }
-}
 .about {
-    width: 48%;
+    padding: 20px 28%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-image: url("../images/about.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ddd;
     
-    .description { text-align: left; }
+    .section-title { text-align: center; }
     
-    .btn {
-        float: left;
-        margin-top: 10px;
+    .btn-inv {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
-.about, .contact-form {
-    vertical-align: top;
-    display: inline-block;
-    margin-top: 20%;
-    text-align: center;
+.contact {
+    padding: 40px;
+    background-color: #ddd;
+    color: #333;
 }
-
-.section-title {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 28px;
-
+.email-link {
     @extend %secion-title;
-}
-
-.contact-label { text-align: left; }
-
-.contact-form {
-    float: right;
-    width: 260px;
-    text-align: center;
-
-    .description {
-        display: none;
-        margin: 0 auto;
-        font-size: 12px;
-
-        &.show { display: block; }
-    }
-    .btn {
-        &.hide { display: none; }
-    }
-}
-
-.contact-info-name {
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 10px;
-}
-.contact-label {
-    display: block;
-    margin-bottom: 2px;
-    color: rgb(100, 100, 100);
-    font-family: $main-font-family;
-    font-size: 14px;
-}
-.contact-input {
-    height: 24px;
-    width: 100%;
-    padding: 2px;
-    border: 1px solid $main-color;
-    outline: 0;
-    border-radius: 2px;
-    background-color: rgba(0, 0, 0, .6);
-    color: #fff;
-    font-size: 16px;
-}
-.contact-input-text {
-    @extend .contact-input;
-
-    vertical-align: top;
-    display: block;
-    height: 100px;
-    resize: none;
-    overflow: hidden;
-}
-.social-icon-wrap {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 10px;
-    padding-top: 5px;
-    border-top: 2px solid $main-color;
-}
-.icon {
-    @extend %btn-interaction;
-
+    
     display: inline-block;
-    margin-left: 4px;
-    margin-right: 4px;
-    color: $main-color;
-    font-size: 36px;
-
-    &:hover { color: #2A9372; }
+    padding-bottom: 2px;
+    margin-bottom: 4px;
+    border-bottom: 2px solid $main-color;
+    font-size: 24px;
+    color: #333;
+    
+    &:hover { color: $main-color; }
 }

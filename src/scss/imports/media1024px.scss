@@ -1,29 +1,10 @@
 @media screen and (max-width: 1024px) {
 
-    .header { background-image: url(../images/hero.1024.jpg); }
-
-    .name { letter-spacing: 6px; }
-
-    .first-name { font-size: 56px; }
-
-    .last-name { font-size: 64px; }
-
-    .front { letter-spacing: 3px; }
-
-    .nav-item {
-        &:hover {
-            .nav-bottom-border { width: 0; }
-        }
-    }
-
-    .nav-link:hover { color: #fff; }
-
-    .btn:hover { background-color: $main-color; }
-
-    .icon:hover { color: $main-color; }
-
-    .contact-wraper {
-        background: url(../images/footer.1024.jpg);
-        background-size: 100% 100%;
-    }
+    .header { background-image: url(../images/header.1024.jpeg); }
+    
+    .description-container { width: 44%; }
+    
+    .work-title { font-size: 32px; }
+    
+    .about { padding: 20px 20%; }
 }

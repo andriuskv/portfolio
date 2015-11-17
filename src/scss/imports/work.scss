@@ -1,76 +1,70 @@
 .work {
-    margin-top: -60px;
-    padding: 20px 0;
-}
-.hr {
-    margin: 60px 2% 20px 2%;
-    border: 1px solid $main-color;
-    
-    &:last-of-type {
-        margin-top: 20px;
-        margin-bottom: 0;
-    }
+    margin-top: -48px;
+    padding-top: 48px;
 }
 .portfolio-item {
-    width: 90%;
+    overflow: hidden;
     margin: 0 auto;
+    padding: 40px;
     
-    &::after {
-        content: "";
-        display: block;
-        width: 80%;
-        margin: 20px auto;
-        border-bottom: 2px solid $main-color;
+    &:nth-of-type(even) {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        background-color: #ddd;
     }
-    &:last-of-type::after {
-        margin: 0;
-        border-bottom: none;
+    &:nth-of-type(odd) {
+        .work-image {
+            float: right;
+            margin-left: 20px;
+            margin-right: 0;
+        }
+        
+        .skill { color: #f2f2f2; }
     }
 }
 .work-image {
     vertical-align: top;
     display: inline-block;
     width: 50%;
-    margin-right: 8px;
+    margin-right: 20px;
 }
 .description-container {
     display: inline-block;
-    width: 44%;
+    width: 40%;
+    color: #333;
 }
 .work-title {
     @extend %secion-title;
 
     display: inline-block;
-    margin: 0;
+    padding-bottom: 2px;
     font-size: 36px;
+    color: #333;
     line-height: 1;
 
     border-bottom: 2px solid $main-color;
 
     &:hover { color: $main-color; }
 }
-.description {
-    margin: 0;
-    padding: 10px 0;
-    color: rgb(100, 100, 100);
-}
+
+.description { margin: 20px 0; }
+
 .skill-title {
     @extend %secion-title;
     
-    display: inline-block;
+    padding-bottom: 1px;
     border-bottom: 2px solid $main-color;
 }
 .skills {
     list-style: none;
     margin-top: 0;
     margin-bottom: 0;
-    padding: 0;
+    padding-left: 0;
 }
 
 .skill {
-    @extend %button;
+    @extend %tag;
     
     display: inline-block;
-    margin-top: 4px;
-    text-align: center;
+    margin-top: 6px;
 }

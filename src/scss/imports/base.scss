@@ -1,38 +1,47 @@
-$main-color: #35b88f;
+$main-color: #086788;
 $main-font-family: sans-serif;
 
 html, body { height: 100%; }
 
-body {
-    background-color: #FFEBD7;
-}
+body { background-color: #f2f2f2; }
+
  *, *:before, *:after { box-sizing: border-box; }
 
 a { text-decoration: none; }
 
-%button {
+%tag {
     padding: 4px 10px;
-    background-color: $main-color;
     border-radius: 2px;
-    color: #FFEBD7;
+    background-color: $main-color;
+    color: #ddd;
     font-family: $main-font-family;
-    font-size: 14px;
-}
-%btn-interaction {
-    &:active { transform: scale(.94); }
+    font-size: 16px;
 }
 %secion-title {
-    color: rgb(100, 100, 100);
-    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
     font-family: $main-font-family;
 }
-
 .btn {
-    @extend %button;
-    @extend %btn-interaction;
+    @extend %tag;
 
     border: 0;
     cursor: pointer;
+    
+    &:hover { background-color: #003459; }
+    
+    &:active { transform: scale(.96); }
+}
+.btn-inv {
+    background-color: #ddd;
+    color: $main-color;
 
-    &:hover { background-color: #2A9372; }
+    &:hover { background-color: #bbb; }    
+}
+.section-title {
+    @extend %secion-title;
+    
+    line-height: 1;
+    font-size: 28px;
 }

@@ -1,18 +1,25 @@
 @media screen and (max-width: 540px) {
-
-    .header { background-size: 175% 100%; }
-
-    .name { letter-spacing: 2px; }
-
-    .first-name { font-size: 46px; }
-
-    .last-name { font-size: 50px; }
-
-    .line { width: 260px; }
     
-    .work { padding-bottom: 0; }
+    .header { background-image: url(../images/header.540.jpeg); }
+    
+    .name { letter-spacing: 6px; }
+    
+    .first-name { font-size: 48px; }
 
-    .work-title { font-size: 26px; }
+    .last-name { font-size: 54px; }
 
-    .section-title { font-size: 24px; }
+    .line { width: 320px; }
+    
+    .front { font-size: 14px; }
+    
+    .portfolio-item { padding: 20px; }
+    
+    .work-title { font-size: 28px; }
+    
+    .about { padding: 20px 6%; }
+    
+    .contact {
+        padding: 20px 0;
+        text-align: center;
+    }
 }
