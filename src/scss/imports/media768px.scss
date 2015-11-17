@@ -1,89 +1,55 @@
 @media screen and (max-width: 768px) {
-    
-    .name { letter-spacing: 4px; }
 
-    .first-name { font-size: 50px; }
+    .header { background-image: url(../images/header.768.jpeg); }
+    
+    .name { letter-spacing: 6px; }
+    
+    .first-name { font-size: 54px; }
 
-    .last-name { font-size: 58px; }
+    .last-name { font-size: 60px; }
+
+    .line { width: 360px; }
     
-    .line { width: 320px; }
-    
-    .front { 
-        font-size: 14px;
-        letter-spacing: 3px;
-    }
-    
-    .nav {  height: 40px; }
-    
-    .nav-list { height: 40px; }
-    
-    .nav-item { height: 40px; }
+    .front { font-size: 16px; }
     
     .link-content {
-        padding: 0 16px;
-        font-size: 12px;
-        line-height: 3;
-    }
+        &:hover { color: #888; }
 
-    .hr { margin: 40px 2% 20px 2%; }
-    
-    .work { margin-top: -40px; }
-    
-    .portfolio-item {
-        margin-bottom: 10px;
-        padding-bottom: 10px;
-        border-bottom: 2px solid $main-color;
-        
-        &:last-of-type {
-            padding-bottom: 0;
-            border-width: 0;
-        }
-        
-        &::after { display: none; }
+        &:active { color: #333; }
     }
     
+    .portfolio-item:nth-of-type(odd) {
+        .work-image {
+            float: none;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    .work-title {
+        &:hover { color: #333; }
+        
+        &:active { color: $main-color; }
+    }
+    
+    .btn {
+        &:hover { background-color: $main-color; }
+
+        &:active { background-color: #003459; }
+    }
+    .btn-inv {
+        &:hover { background-color: #ddd; }
+
+        &:active { background-color: #bbb; }
+    }
     .work-image, .description-container {
         display: block;
         width: 100%;
-        margin: 0 auto;
     }
     
-    .description-container { margin-top: 10px; }
-        
-    .contact-wraper { background: none; }
-    
-    .contact { width: 90%; }
-    
-    .about, .contact-form {
-        display: block;
-        width: 100%;
-        margin: 0 auto;
-    }
+    .description-container { margin-top: 20px; }
     
     .about {
-        padding-top: 44px;
-        
-        .btn { float: none; }
-    }
-    .contact-form {
-        float: none;
-        margin-top: 10px;
-        padding-top: 10px;
-        border-top: 2px solid $main-color;
-        font-size: 16px;
-    }
-    
-    .contact-form {
-        .btn { padding: 4px 20px; }
-    }
-}
-@media screen and (max-width: 768px) and (orientation: portrait) {
-    .name {
-        margin-top: 40%;
-    }
-}
-@media screen and (max-width: 768px) and (orientation: landscape) {
-    .name {
-        margin-top: 10%;
+        padding: 20px 16%;
+        background-image: url("../images/about.1024.jpg");
     }
 }

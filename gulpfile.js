@@ -42,7 +42,7 @@ gulp.task("build:html", function() {
 });
 
 gulp.task("build:images", function() {
-    return gulp.src(["src/images/*", "src/images/*/*"])
+    return gulp.src(["src/images/*", "src/images/**/*"])
         .pipe(imagemin({
             optimizationLevel: 7,
             progressive: true,
@@ -58,11 +58,6 @@ gulp.task("build:fonts", function() {
 
 gulp.task("build:favicon", function() {
     return gulp.src("src/favicon.ico")
-        .pipe(gulp.dest("dist"));
-});
-
-gulp.task("build:resume", function() {
-    return gulp.src("src/resume.pdf")
         .pipe(gulp.dest("dist"));
 });
 
