@@ -1,15 +1,15 @@
 /* global require, console */
-var gulp = require('gulp');
-var watch = require('gulp-watch');
-var uglify = require('gulp-uglify');
-var csso = require('gulp-csso');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var sass = require('gulp-sass');
+var gulp = require("gulp");
+var watch = require("gulp-watch");
+var uglify = require("gulp-uglify");
+var csso = require("gulp-csso");
+var sourcemaps = require("gulp-sourcemaps");
+var autoprefixer = require("gulp-autoprefixer");
+var sass = require("gulp-sass");
 var imagemin = require("gulp-imagemin");
 
 gulp.task("default", ["watch"]);
-gulp.task("build", ["build:js", "build:css", "build:html", "build:images", "build:fonts", "build:favicon"]);
+gulp.task("build", ["build:js", "build:css", "build:html", "build:images", "build:fonts", "build:favicon", "build:cname", "build:sw"]);
 
 gulp.task("sass", function() {
     return gulp.src("src/scss/*.scss")
@@ -42,7 +42,7 @@ gulp.task("build:html", function() {
 });
 
 gulp.task("build:images", function() {
-    return gulp.src(["src/images/*", "src/images/*/*"])
+    return gulp.src(["src/images/*", "src/images/**/*"])
         .pipe(imagemin({
             optimizationLevel: 7,
             progressive: true,
@@ -58,6 +58,16 @@ gulp.task("build:fonts", function() {
 
 gulp.task("build:favicon", function() {
     return gulp.src("src/favicon.ico")
+        .pipe(gulp.dest("dist"));
+});
+
+gulp.task("build:cname", function() {
+    return gulp.src("src/CNAME")
+        .pipe(gulp.dest("dist"));
+});
+
+gulp.task("build:sw", function() {
+    return gulp.src("src/sw.js")
         .pipe(gulp.dest("dist"));
 });
 

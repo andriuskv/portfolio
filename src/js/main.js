@@ -66,4 +66,10 @@
             window.addEventListener("scroll", onScroll, false);
         }
     }, false);
+    
+    (function initServiceWorker() {
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js");
+        }
+    })();
 })();
