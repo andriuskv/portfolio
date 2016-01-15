@@ -250,8 +250,8 @@ a {
   right: 0;
   padding-left: 0;
   margin: 0;
-  border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   background-color: #ddd; }
 
 .nav-item {
@@ -283,7 +283,8 @@ a {
   .portfolio-item:nth-of-type(odd) .work-image {
     float: right;
     margin-left: 20px;
-    margin-right: 0; }
+    margin-right: 0;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.4); }
   .portfolio-item:nth-of-type(odd) .skill {
     color: #f2f2f2; }
 
@@ -292,7 +293,7 @@ a {
   display: inline-block;
   width: 50%;
   margin-right: 20px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
+  box-shadow: -4px 4px 2px rgba(0, 0, 0, 0.4); }
 
 .description-container {
   display: inline-block;
@@ -389,7 +390,8 @@ a {
   .portfolio-item:nth-of-type(odd) .work-image {
     float: none;
     margin-left: 0;
-    margin-right: 0; }
+    margin-right: 0;
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.4); }
   .work-title:hover {
     color: #333; }
   .work-title:active {
@@ -405,6 +407,8 @@ a {
   .work-image, .description-container {
     display: block;
     width: 100%; }
+  .work-image {
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.4); }
   .description-container {
     margin-top: 20px; }
   .about {
