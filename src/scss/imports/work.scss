@@ -4,23 +4,19 @@
 }
 .portfolio-item {
     overflow: hidden;
-    margin: 0 auto;
     padding: 40px;
 
     &:nth-of-type(even) {
-        border-top: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
-        background-color: #ddd;
+        background-color: darken($light-color, 8%);
+
+        .work-image { width: calc(50% - 26px); }
+        .description-container { width: 50%; }
     }
     &:nth-of-type(odd) {
         .work-image {
             float: right;
-            margin-left: 20px;
             margin-right: 0;
-            box-shadow: 4px 4px 2px rgba(0, 0, 0, .4);
         }
-
-        .skill { color: #f2f2f2; }
     }
 }
 .work-image {
@@ -28,45 +24,19 @@
     display: inline-block;
     width: 50%;
     margin-right: 20px;
-    box-shadow: -4px 4px 2px rgba(0, 0, 0, .4);
 }
 .description-container {
     display: inline-block;
-    width: 40%;
-    color: #333;
+    width: calc(50% - 26px);
+    color: $dark-color;
 }
 .work-title {
-    @extend %secion-title;
-
-    display: inline-block;
-    padding-bottom: 2px;
-    font-size: 36px;
-    color: #333;
-    line-height: 1;
-
-    border-bottom: 2px solid $main-color;
-
-    &:hover { color: $main-color; }
+    font-size: 2em;
 }
-
-.description { margin: 20px 0; }
-
-.skill-title {
-    @extend %secion-title;
-
-    padding-bottom: 1px;
-    border-bottom: 2px solid $main-color;
+.description {
+    margin: 20px 0;
+    font-size: 1.2em;
 }
-.skills {
-    list-style: none;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-}
-
-.skill {
-    @extend %tag;
-
-    display: inline-block;
-    margin-top: 6px;
+.work-btn-container {
+    margin-top: 20px;
 }

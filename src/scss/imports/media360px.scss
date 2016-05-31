@@ -1,27 +1,21 @@
 @media screen and (max-width: 360px) {
-    
-    .header { background-image: url(../images/header.360.jpg); }
-    
-    .name { letter-spacing: 6px; }
-    
-    .first-name { font-size: 42px; }
-
-    .last-name { font-size: 48px; }
-
-    .line { width: 280px; }
-    
-    .front { font-size: 12px; }
-
-    .portfolio-item { padding: 20px 10px; }
-    
-    .description-container { margin-top: 10px; }
-    
-    .description { margin: 10px 0; }
-    
-    .skill { font-size: 14px; }
-    
+    .header {
+        background-image: url(../assets/images/header.360.jpg);
+    }
+    .line {
+        width: 280px;
+    }
+    .portfolio-item {
+        padding: 10px;
+    }
+    .description-container {
+        margin-top: 10px;
+    }
+    .description {
+        margin: 10px 0;
+    }
 	.about {
-        padding: 20px 2%;
+        padding: 10px 2%;
         background-image: url("../images/about.540.jpg");
     }
 }

@@ -1,17 +1,24 @@
 {
-  "name": "",
-  "description": "Portfolio",
-  "devDependencies": {
-    "gulp": "~3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-csso": "^1.0.1",
-    "gulp-imagemin": "^2.4.0",
-    "gulp-sass": "^2.1.1",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.1",
-    "gulp-watch": "^4.3.5"
-  },
+  "name": "Portfolio",
+  "description": "",
   "scripts": {
-    "gulp": "gulp"
+    "scss": "node-sass src/scss/main.scss --source-map-embed src/css/main.css && npm run autoprefixer",
+    "autoprefixer": "postcss --use autoprefixer src/css/main.css -d src/css",
+    "watch:css": "onchange 'src/scss/*.scss' 'src/scss/imports/*.scss' -- npm run scss",
+    "watch": "npm run watch:css",
+    "start": "live-server & npm run watch",
+    "build:css": "npm run scss && csso ./src/css/main.css ./dist/css/main.css",
+    "build:js": "cp ./src/js/main.js ./dist/js",
+    "build:assets": "cp -R ./src/assets ./dist",
+    "build:others": "cp ./src/{sw.js,CNAME,index.html,favicon.ico} ./dist",
+    "prebuild": "rm -rf ./dist && mkdir -p ./dist/{css,js,assets}",
+    "build": "npm run build:css && npm run build:js && npm run build:assets && npm run build:others"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "csso": "^2.1.1",
+    "eslint": "^2.11.0",
+    "node-sass": "^3.7.0",
+    "onchange": "^2.4.0"
   }
 }
