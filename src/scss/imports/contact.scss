@@ -1,35 +1,38 @@
+.section-title {
+    font-size: 1.75em;
+}
 .about {
     padding: 20px 28%;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    background-image: url("../images/about.jpg");
+    border-top: 1px solid $dark-color;
+    border-bottom: 1px solid $dark-color;
+    background-image: url("../assets/images/about.jpg");
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #ddd;
-    
+    color: $light-color;
+
     .section-title { text-align: center; }
-    
     .btn-inv {
         position: relative;
         left: 50%;
         transform: translateX(-50%);
+        display: inline-block;
     }
 }
 .contact {
     padding: 40px;
-    background-color: #ddd;
-    color: #333;
+    background-color: $light-color;
+    color: $dark-color;
 }
 .email-link {
-    @extend %secion-title;
-    
     display: inline-block;
     padding-bottom: 2px;
-    margin-bottom: 4px;
-    border-bottom: 2px solid $main-color;
-    font-size: 24px;
-    color: #333;
-    
-    &:hover { color: $main-color; }
+    margin-bottom: 8px;
+    border-bottom: 2px solid $brand-color;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: $main-font-family;
+    color: $dark-color;
+
+    &:hover { color: $brand-color; }
 }
