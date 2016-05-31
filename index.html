@@ -6,8 +6,8 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
@@ -18,100 +18,87 @@
                 <div class="last-name">Kvedaras</div>
             </h1>
             <div class="line"></div>
-            <h3 class="front">Front-End Developer</h3>
+            <p class="front">Front-End Developer</p>
         </div>
         <ul id="js-nav-list" class="nav-list nav-default">
             <li id="js-nav-home" class="nav-item">
-                <a href="#home"><div class="link-content">Home</div></a>
+                <a href="#home" class="nav-link">
+                    <span class="nav-link-content">Home</span>
+                </a>
             </li>
             <li id="js-nav-work" class="nav-item">
-                <a href="#work"><div class="link-content">Work</div></a>
+                <a href="#work" class="nav-link">
+                    <span class="nav-link-content">Work</span>
+                </a>
             </li>
             <li id="js-nav-contact" class="nav-item">
-                <a href="#contact"><div class="link-content">Contact</div></a>
+                <a href="#contact" class="nav-link">
+                    <span class="nav-link-content">Contact</span>
+                </a>
             </li>
         </ul>
     </header>
     <main id="work" class="work">
         <section class="portfolio-item">
-            <a href="http://andriuskv.github.io/image-editor">
-                <img class="work-image" alt="screenshot of the project"
-                src="images/work/work3.jpg"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                srcset="images/work/work3.500.jpg 500w, images/work/work3.800.jpg 800w, images/work/work3.jpg 1000w">
-            </a>
+            <img class="work-image" alt="screenshot of the project"
+            src="assets/images/work1.jpg"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            srcset="assets/images/work1.500.jpg 500w, assets/images/work1.800.jpg 800w, assets/images/work1.jpg 1000w">
             <div class="description-container">
-                <a href="http://andriuskv.github.io/image-resizer">
-                    <h2 class="work-title">Image Editor</h2>
-                </a>
+                <h2 class="heading work-title">Initium</h2>
+                <p class="description">Initium is an extension for Google Chrome. It is an extension that replaces new tab page with additional features.</p>
+                <strong>Technologies:</strong>
+                <span>Angular 2, SASS, Chrome Extension, various APIs</span>
+                <div class="work-btn-container">
+                    <a href="https://chrome.google.com/webstore/detail/initium/jmefobebfekofkbpfmjkmhjgaaaojkml" class="btn">View Project</a>
+                    <a href="https://github.com/AndriusKv/Initium" class="icon-github-circled btn">Github</a>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-item">
+            <img class="work-image" alt="screenshot of the project"
+            src="assets/images/work3.jpg"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            srcset="assets/images/work3.500.jpg 500w, assets/images/work3.800.jpg 800w, assets/images/work3.jpg 1000w">
+            <div class="description-container">
+                <h2 class="heading work-title">Image Editor</h2>
                 <p class="description">Image Editor is a simple tool to resize or crop images in bulk.</p>
-                <span class="skill-title">Technologies</span>
-                <ul class="skills">
-                    <li class="skill">HTML5 Canvas</li>
-                    <li class="skill">Web Workers</li>
-                    <li class="skill">SASS</li>
-                    <li class="skill">JSZip</li>
-                </ul>
+                <strong>Technologies:</strong>
+                <span>HTML5 Canvas, Web Workers, SASS, JSZip</span>
+                <div class="work-btn-container">
+                    <a href="https://andriuskv.github.io/image-editor" class="btn">View Project</a>
+                    <a href="https://github.com/AndriusKv/image-editor" class="icon-github-circled btn">Github</a>
+                </div>
             </div>
         </section>
         <section class="portfolio-item">
-            <a href="https://chrome.google.com/webstore/detail/initium/jmefobebfekofkbpfmjkmhjgaaaojkml">
-                <img class="work-image" alt="screenshot of the project"
-                src="images/work/work1.jpg"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                srcset="images/work/work1.500.jpg 500w, images/work/work1.800.jpg 800w, images/work/work1.jpg 1000w">
-            </a>
+            <img class="work-image" alt="screenshot of the project"
+            src="assets/images/work2.jpg"
+            srcset="assets/images/work2.768.jpg 768w, assets/images/work2.jpg 1024w"
+            sizes="50vw">
             <div class="description-container">
-                <a href="https://chrome.google.com/webstore/detail/initium/jmefobebfekofkbpfmjkmhjgaaaojkml" target="_blank">
-                    <h2 class="work-title">Initium</h2>
-                </a>
-                <p class="description">Initium is a Google Chrome extension that replaces Chrome's new tab page with additional features.</p>
-                <span class="skill-title">Technologies</span>
-                <ul class="skills">
-                    <li class="skill">AngularJs</li>
-                    <li class="skill">SASS</li>
-                    <li class="skill">Chrome Extension</li>
-                </ul>
-            </div>
-        </section>
-        <section class="portfolio-item">
-            <a href="https://vocem.herokuapp.com">
-                <img class="work-image" alt="screenshot of the project"
-                src="images/work/work2.jpg"
-                srcset="images/work/work2.768.jpg 768w, images/work/work2.jpg 1024w"
-                sizes="50vw">
-            </a>
-            <div class="description-container">
-                <a href="https://vocem.herokuapp.com">
-                    <h2 class="work-title">Vocem</h2>
-                </a>
+                <h2 class="heading work-title">Vocem</h2>
                 <p class="description">Vocem is a custom polls platform with live results.</p>
-                <span class="skill-title">Technologies</span>
-                <ul class="skills">
-                    <li class="skill">MEAN stack</li>
-                    <li class="skill">Socket.io</li>
-                    <li class="skill">SASS</li>
-                </ul>
+                <strong>Technologies:</strong>
+                <span>AngularJs, Socket.io, SASS</span>
+                <div class="work-btn-container">
+                    <a href="https://vocem.herokuapp.com" class="btn">View Project</a>
+                    <a href="https://github.com/AndriusKv/vocem" class="icon-github-circled btn">Github</a>
+                </div>
             </div>
         </section>
     </main>
     <div class="about">
-        <h2 class="section-title">About me</h2>
+        <h2 class="heading section-title">About me</h2>
         <p class="description">I am 23 year old self-taught Front End developer from Lithuania. I'm persistent problem solver, constantly seeking out new knowledge to expand my skill set.</p>
-        <a href="resume.pdf" target="_blank"><button class="btn btn-inv">Download Resume</button></a>
+        <a href="resume.pdf" class="btn btn-inv" target="_blank">Download Resume</a>
     </div>
     <div id="contact" class="contact">
-        <h2 class="section-title">Get in touch</h2>
-        <a href="mailto:ikandrius@gmail.com" title="Email" target="_blank">
-            <span class="email-link">ikandrius@gmail.com</span>
-        </a>
+        <h2 class="heading section-title">Get in touch</h2>
+        <a href="mailto:ikandrius@gmail.com" class="email-link" title="Email" target="_blank">ikandrius@gmail.com</a>
         <div>
-            <a href="https://github.com/andriuskv" target="_blank">
-                <button class="btn">GitHub</button>
-            </a>
-            <a href="https://lt.linkedin.com/in/andriuskvedaras" target="_blank">
-                <button class="btn">LinkedIn</button>
-            </a>
+            <a href="https://github.com/andriuskv" class="btn" target="_blank">GitHub</a>
+            <a href="https://lt.linkedin.com/in/andriuskvedaras" class="btn" target="_blank">LinkedIn</a>
         </div>
     </div>
     <script src="js/main.js"></script>

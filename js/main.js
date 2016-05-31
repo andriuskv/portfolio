@@ -1,1 +1,75 @@
-"use strict";!function(){function e(e){var t=document.getElementById(e);return t.offsetTop+t.clientHeight<=document.body.clientHeight+document.documentElement.scrollTop}function t(e){r.className="nav-list "+e}function n(){var n=window.pageYOffset;"home"!==a&&n>i&&c>n?(a="home",t("nav-default")):"work"!==a&&n>=c?(a="work",t("nav-fixed")):"contact"!==a&&e("contact")&&(a="contact"),s=!1}function o(){s||(s=!0,requestAnimationFrame(n))}var c=document.getElementById("work").offsetTop,i=document.getElementById("home").offsetTop,r=document.getElementById("js-nav-list"),a="home",s=!1;n(),window.addEventListener("scroll",o,!1),r.addEventListener("click",function(e){var n=e.target,c="";-1!==n.className.indexOf("link-content")&&(c=n.innerHTML.toLowerCase(),window.removeEventListener("scroll",o,!1),"home"===c&&"home"!==a?t("nav-default"):"work"!==c&&"contact"!==c||"work"===a&&"contact"===a||t("nav-fixed"),window.addEventListener("scroll",o,!1))},!1),function(){"serviceWorker"in navigator&&navigator.serviceWorker.register("sw.js")}()}();
+"use strict";
+
+(function () {
+    var workOffset = document.getElementById("work").offsetTop,
+        homeOffset = document.getElementById("home").offsetTop,
+        nav = document.getElementById("js-nav-list"),
+        currentSection = "home",
+        ticking = false;
+    
+    function isElementsBottomVisible(id) {
+        var element = document.getElementById(id);
+        
+        return element.offsetTop + element.clientHeight <= document.body.clientHeight + document.documentElement.scrollTop;
+    }
+    
+    function setNavClass(classToAdd) {
+        nav.className = "nav-list " + classToAdd;
+    }
+    
+    function updateNav() {
+        var currentPos = window.pageYOffset;
+
+        if (currentSection !== "home" && currentPos > homeOffset && currentPos < workOffset) {
+            currentSection = "home";
+            setNavClass("nav-default");
+        }
+        else if (currentSection !== "work" && currentPos >= workOffset) {
+            currentSection = "work";
+            setNavClass("nav-fixed");
+        }
+        else if (currentSection !== "contact" && isElementsBottomVisible("contact")) {
+            currentSection = "contact";
+        }
+        
+        ticking = false;
+    }
+    
+    function onScroll() {
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(updateNav);
+        }
+    }
+    
+    updateNav();
+    
+    window.addEventListener("scroll", onScroll, false);
+
+    nav.addEventListener("click", function(event) {
+        var target = event.target,
+            section = "";
+        
+        if (target.className.indexOf("link-content") !== -1) {
+            section = target.innerHTML.toLowerCase();
+            
+            window.removeEventListener("scroll", onScroll, false);
+            
+            if (section === "home" && currentSection !== "home") {
+                setNavClass("nav-default");
+            }
+            else if ((section === "work" || section === "contact") &&
+                    (currentSection !== "work" || currentSection !== "contact")) {
+                setNavClass("nav-fixed");
+            }
+            
+            window.addEventListener("scroll", onScroll, false);
+        }
+    }, false);
+    
+    (function initServiceWorker() {
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js");
+        }
+    })();
+})();
