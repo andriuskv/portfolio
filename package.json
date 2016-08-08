@@ -15,10 +15,13 @@
     "build": "npm run build:css && npm run build:js && npm run build:assets && npm run build:others"
   },
   "devDependencies": {
-    "babel-eslint": "^6.0.4",
-    "csso": "^2.1.1",
-    "eslint": "^2.11.0",
-    "node-sass": "^3.7.0",
-    "onchange": "^2.4.0"
+    "autoprefixer": "^6.3.7",
+    "babel-eslint": "^6.1.2",
+    "csso": "^2.2.1",
+    "eslint": "^3.2.2",
+    "live-server": "^1.0.0",
+    "node-sass": "^3.8.0",
+    "onchange": "^2.5.0",
+    "postcss-cli": "^2.5.2"
   }
 }

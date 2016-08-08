@@ -1,38 +1,26 @@
-.section-title {
-    font-size: 1.75em;
-}
-.about {
-    padding: 20px 28%;
-    border-top: 1px solid $dark-color;
-    border-bottom: 1px solid $dark-color;
-    background-image: url("../assets/images/about.jpg");
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: $light-color;
-
-    .section-title { text-align: center; }
-    .btn-inv {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        display: inline-block;
-    }
-}
 .contact {
-    padding: 40px;
-    background-color: $light-color;
+    padding: 20px;
     color: $dark-color;
 }
-.email-link {
+.contact-links {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+.contact-link-container {
     display: inline-block;
-    padding-bottom: 2px;
-    margin-bottom: 8px;
-    border-bottom: 2px solid $brand-color;
-    font-size: 1.5em;
-    font-weight: bold;
-    font-family: $main-font-family;
-    color: $dark-color;
+}
+.contact-link {
+    padding: 0 2px;
+    color: $brand-color;
+    font-size: 2.4em;
+    transition: color 0.2s;
 
-    &:hover { color: $brand-color; }
+    &:hover {
+        color: darken($brand-color, 4%);
+    }
+    &:active {
+        color: darken($brand-color, 12%);
+    }
 }

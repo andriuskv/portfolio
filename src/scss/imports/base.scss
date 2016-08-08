@@ -11,7 +11,7 @@ body {
 a {
     text-decoration: none;
 }
-.heading {
+h2 {
     margin-top: 0;
     margin-bottom: 0;
     font-family: $main-font-family;
@@ -26,13 +26,24 @@ a {
     font-size: 0.875em;
     transition: 0.2s background-color;
 
-    &:hover { background-color: darken($brand-color, 4%); }
-    &:active { background-color: darken($brand-color, 12%); }
+    &:hover {
+        background-color: darken($brand-color, 4%);
+    }
+    &:active {
+        background-color: darken($brand-color, 12%);
+    }
 }
 .btn-inv {
     background-color: $light-color;
     color: $brand-color;
 
-    &:hover { background-color: darken($light-color, 8%); }
-    &:active { background-color: darken($light-color, 16%); }
+    &:hover {
+        background-color: darken($light-color, 8%);
+    }
+    &:active {
+        background-color: darken($light-color, 16%);
+    }
+}
+.section-title {
+    font-size: 1.75em;
 }

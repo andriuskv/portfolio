@@ -1,75 +1,15 @@
-"use strict";
+var nav = document.getElementById("js-nav-list");
+var navTopPosition = nav.offsetTop;
 
-(function () {
-    var workOffset = document.getElementById("work").offsetTop,
-        homeOffset = document.getElementById("home").offsetTop,
-        nav = document.getElementById("js-nav-list"),
-        currentSection = "home",
-        ticking = false;
-    
-    function isElementsBottomVisible(id) {
-        var element = document.getElementById(id);
-        
-        return element.offsetTop + element.clientHeight <= document.body.clientHeight + document.documentElement.scrollTop;
-    }
-    
-    function setNavClass(classToAdd) {
-        nav.className = "nav-list " + classToAdd;
-    }
-    
-    function updateNav() {
-        var currentPos = window.pageYOffset;
+function setNavClass(classToAdd) {
+    nav.className = "nav-list " + classToAdd;
+}
 
-        if (currentSection !== "home" && currentPos > homeOffset && currentPos < workOffset) {
-            currentSection = "home";
-            setNavClass("nav-default");
-        }
-        else if (currentSection !== "work" && currentPos >= workOffset) {
-            currentSection = "work";
-            setNavClass("nav-fixed");
-        }
-        else if (currentSection !== "contact" && isElementsBottomVisible("contact")) {
-            currentSection = "contact";
-        }
-        
-        ticking = false;
+window.addEventListener("scroll", function() {
+    if (window.pageYOffset >= navTopPosition) {
+        setNavClass("nav-fixed");
     }
-    
-    function onScroll() {
-        if (!ticking) {
-            ticking = true;
-            requestAnimationFrame(updateNav);
-        }
+    else {
+        setNavClass("nav-default");
     }
-    
-    updateNav();
-    
-    window.addEventListener("scroll", onScroll, false);
-
-    nav.addEventListener("click", function(event) {
-        var target = event.target,
-            section = "";
-        
-        if (target.className.indexOf("link-content") !== -1) {
-            section = target.innerHTML.toLowerCase();
-            
-            window.removeEventListener("scroll", onScroll, false);
-            
-            if (section === "home" && currentSection !== "home") {
-                setNavClass("nav-default");
-            }
-            else if ((section === "work" || section === "contact") &&
-                    (currentSection !== "work" || currentSection !== "contact")) {
-                setNavClass("nav-fixed");
-            }
-            
-            window.addEventListener("scroll", onScroll, false);
-        }
-    }, false);
-    
-    (function initServiceWorker() {
-        if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("sw.js");
-        }
-    })();
-})();
+});
