@@ -1,3 +1,5 @@
 node_modules
-.brackets.json
-.eslintrc
+src
+.eslintrc.json
+package.json
+config.json
