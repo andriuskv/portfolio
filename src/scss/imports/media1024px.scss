@@ -1,11 +1,8 @@
 @media screen and (max-width: 1024px) {
     .header {
-        background-image: url(../assets/images/header.1024.jpg);
+        background-image: url("../assets/images/header.1024.jpg");
     }
-    .portfolio-item {
+    .project {
         padding: 20px;
-    }
-    .about {
-        padding: 20px 20%;
     }
 }

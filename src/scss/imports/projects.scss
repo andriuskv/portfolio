@@ -1,0 +1,30 @@
+.projects {
+    margin-top: -48px;
+    padding-top: 48px;
+}
+.project {
+    overflow: hidden;
+    padding: 40px;
+
+    &:nth-of-type(even) {
+        background-color: darken($light-color, 8%);
+    }
+}
+.project-left-side {
+    float: left;
+    width: calc(50% - 26px);
+}
+.project-right-side {
+    float: right;
+    width: 50%;
+}
+.project-description-container {
+    color: $dark-color;
+}
+.project-title {
+    font-size: 2em;
+}
+.description {
+    margin: 20px 0;
+    font-size: 1.2em;
+}

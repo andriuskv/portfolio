@@ -1,6 +1,14 @@
 @media screen and (max-width: 768px) {
     .header {
-        background-image: url(../assets/images/header.768.jpg);
+        background-image: url("../assets/images/header.768.jpg");
+    }
+    .header-link {
+        &:hover {
+            color: transparentize($light-color, 0.2);
+        }
+        &:active {
+            color: $light-color;
+        }
     }
     .name {
         letter-spacing: 6px;
@@ -8,38 +16,37 @@
     .line {
         width: 360px;
     }
-    .description-container {
+    .btn:hover {
+        background-color: $brand-color;
+    }
+    .btn-inv:hover {
+        background-color: $light-color;
+    }
+    .nav-link {
+        padding: 0 16px;
+
+        &:hover {
+            color: darken($light-color, 36%);
+        }
+        &:active {
+            color: $dark-color;
+        }
+    }
+    .project-left-side, .project-right-side {
+        float: none;
+        width: 100%;
+    }
+    .project-description-container {
         margin-top: 20px;
     }
     .description {
         margin: 10px 0;
     }
-    .work-btn-container {
-        margin-top: 10px;
-    }
-    .btn:hover {
-        background-color: $brand-color;
-    }
-    .btn-inv {
-        &:hover { background-color: $light-color; }
-    }
-    .nav-link {
-        &:hover { color: darken($light-color, 36%); }
-        &:active { color: $dark-color; }
-    }
-    .portfolio-item:nth-of-type(odd) .work-image {
-        float: none;
-        margin-right: 0;
-    }
-    .portfolio-item, .portfolio-item:nth-of-type(even) {
-        .description-container,
-        .work-image {
-            display: block;
-            width: 100%;
-        }
-    }
     .about {
-        padding: 20px 16%;
+        padding: 20px;
         background-image: url("../assets/images/about.1024.jpg");
+    }
+    .contact {
+        text-align: center;
     }
 }
