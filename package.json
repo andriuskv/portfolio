@@ -6,7 +6,7 @@
     "autoprefixer": "postcss --use autoprefixer src/css/main.css -d src/css",
     "watch:css": "onchange 'src/scss/*.scss' 'src/scss/imports/*.scss' -- npm run scss",
     "watch": "npm run watch:css",
-    "start": "live-server & npm run watch",
+    "start": "live-server & npm run scss && npm run watch",
     "build:css": "npm run scss && csso ./src/css/main.css ./dist/css/main.css",
     "build:js": "cp ./src/js/main.js ./dist/js",
     "build:assets": "cp -R ./src/assets ./dist",
@@ -15,10 +15,10 @@
     "build": "npm run build:css && npm run build:js && npm run build:assets && npm run build:others"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.0",
+    "autoprefixer": "^6.5.1",
     "babel-eslint": "^7.0.0",
     "csso": "^2.2.1",
-    "eslint": "^3.7.1",
+    "eslint": "^3.8.0",
     "live-server": "^1.1.0",
     "node-sass": "^3.10.1",
     "onchange": "^3.0.2",

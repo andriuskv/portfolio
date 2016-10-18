@@ -19,7 +19,7 @@
     margin-top: 0;
     margin-bottom: 0;
     font-weight: bold;
-    letter-spacing: 8px;
+    letter-spacing: 0.25em;
 }
 .first-name, .last-name {
     line-height: 1;
@@ -31,7 +31,7 @@
     font-size: 2.2em;
 }
 .line {
-    width: 400px;
+    width: 24em;
     height: 8px;
     margin: 0 auto;
     border-top: solid 1px $light-color;
@@ -40,9 +40,8 @@
 .front {
     margin-top: 10px;
     margin-bottom: 0;
-    text-transform: uppercase;
     font-size: 1.12em;
-    letter-spacing: 4px;
+    letter-spacing: 0.22em;
 }
 .nav-default {
     position: absolute;
@@ -53,33 +52,29 @@
     top: 0;
 }
 .nav-list {
+    list-style: none;
     left: 0;
     right: 0;
+    display: flex;
+    justify-content: center;
+    height: 3.48em;
     padding-left: 0;
     margin: 0;
     box-shadow: 0 2px 2px transparentize($dark-color, 0.4);
     background-color: darken($light-color, 8%);
 }
-.nav-item {
-    display: inline-block;
-    height: 48px;
-}
 .nav-link {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    padding: 0 20px;
+    padding: 0 1em;
+    font-family: $main-font-family;
+    font-size: 1.16em;
     color: lighten($dark-color, 20%);
     transition: 0.2s color;
 
     &:hover {
         color: $dark-color;
     }
-}
-.nav-link-content {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    display: inline-block;
-    font-family: $main-font-family;
-    font-size: 1em;
 }
