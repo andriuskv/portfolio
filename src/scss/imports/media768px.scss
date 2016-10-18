@@ -2,20 +2,6 @@
     .header {
         background-image: url("../assets/images/header.768.jpg");
     }
-    .header-link {
-        &:hover {
-            color: transparentize($light-color, 0.2);
-        }
-        &:active {
-            color: $light-color;
-        }
-    }
-    .name {
-        letter-spacing: 6px;
-    }
-    .line {
-        width: 360px;
-    }
     .btn:hover {
         background-color: $brand-color;
     }
@@ -23,8 +9,6 @@
         background-color: $light-color;
     }
     .nav-link {
-        padding: 0 16px;
-
         &:hover {
             color: darken($light-color, 36%);
         }
