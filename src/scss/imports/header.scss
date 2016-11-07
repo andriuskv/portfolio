@@ -1,8 +1,5 @@
 .header {
-    display: inline-block;
-    width: 100%;
-    min-height: 100%;
-    height: 100%;
+    height: 82%;
     background-image: url("../assets/images/header.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -13,7 +10,7 @@
     position: relative;
     top: 32%;
     transform: translateY(-32%);
-    color: transparentize($light-color, 0.2);
+    color: $light-color;
 }
 .name {
     margin-top: 0;
@@ -25,56 +22,39 @@
     line-height: 1;
 }
 .first-name {
-    font-size: 2em;
+    font-size: 1.8em;
 }
 .last-name {
-    font-size: 2.2em;
+    font-size: 2em;
 }
-.line {
-    width: 24em;
+.double-line {
+    width: 22.4em;
     height: 8px;
     margin: 0 auto;
     border-top: solid 1px $light-color;
     border-bottom: solid 1px $light-color;
 }
 .front {
-    margin-top: 10px;
-    margin-bottom: 0;
+    margin-top: 6px;
+    margin-bottom: 4px;
     font-size: 1.12em;
     letter-spacing: 0.22em;
 }
-.nav-default {
-    position: absolute;
-    bottom: 0;
+.line {
+    width: 18.6em;
+    height: 1px;
+    margin: 0 auto;
+    background-color: $light-color;
 }
-.nav-fixed {
-    position: fixed;
-    top: 0;
-}
-.nav-list {
-    list-style: none;
-    left: 0;
-    right: 0;
+.header-links {
     display: flex;
     justify-content: center;
-    height: 3.48em;
-    padding-left: 0;
-    margin: 0;
-    box-shadow: 0 2px 2px transparentize($dark-color, 0.4);
-    background-color: darken($light-color, 8%);
+    margin-top: 4px;
 }
-.nav-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 0 1em;
-    font-family: $main-font-family;
-    font-size: 1.16em;
-    color: lighten($dark-color, 20%);
-    transition: 0.2s color;
+.header-link {
+    margin: 4px 2px;
 
-    &:hover {
-        color: $dark-color;
+    .btn {
+        padding: 4px 6px;
     }
 }

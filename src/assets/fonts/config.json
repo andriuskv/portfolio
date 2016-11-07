@@ -19,10 +19,16 @@
       "src": "fontawesome"
     },
     {
-      "uid": "17c21cd98db80e521e573eba247bd69b",
-      "css": "mail-squared",
-      "code": 59392,
+      "uid": "ccc2329632396dc096bb638d4b46fb98",
+      "css": "mail-alt",
+      "code": 61664,
       "src": "fontawesome"
+    },
+    {
+      "uid": "05a2f4c4839012434774cc1ceb4c0f9b",
+      "css": "download-alt",
+      "code": 59392,
+      "src": "elusive"
     }
   ]
 }

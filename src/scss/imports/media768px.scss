@@ -8,29 +8,15 @@
     .btn-inv:hover {
         background-color: $light-color;
     }
-    .nav-link {
-        &:hover {
-            color: darken($light-color, 36%);
-        }
-        &:active {
-            color: $dark-color;
-        }
-    }
-    .project-left-side, .project-right-side {
+    .project-left-side,
+    .project-right-side {
         float: none;
+    }
+    .project-image,
+    .project-description-container {
         width: 100%;
     }
     .project-description-container {
-        margin-top: 20px;
-    }
-    .description {
-        margin: 10px 0;
-    }
-    .about {
-        padding: 20px;
-        background-image: url("../assets/images/about.1024.jpg");
-    }
-    .contact {
-        text-align: center;
+        margin-top: 1.25em;
     }
 }
