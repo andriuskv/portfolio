@@ -10,60 +10,73 @@
     <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-    <header id="home" class="header">
+    <header class="header">
         <div class="hero">
             <h1 class="name">
                 <div class="first-name">Andrius</div>
                 <div class="last-name">Kvedaras</div>
             </h1>
-            <div class="line"></div>
+            <div class="double-line"></div>
             <p class="front">FRONT-END DEVELOPER</p>
+            <div class="line"></div>
+            <ul class="header-links">
+                <li class="header-link">
+                    <a href="mailto:ikandrius@gmail.com" class="btn btn-inv"
+                        title="Email" target="_blank">
+                        <i class="icon-mail-alt"></i>
+                        <span>Email</span>
+                    </a>
+                </li>
+                <li class="header-link">
+                    <a href="https://github.com/andriuskv" class="btn btn-inv"
+                        title="Github" target="_blank">
+                        <i class="icon-github-circled"></i>
+                        <span>Github</span>
+                    </a>
+                </li>
+                <li class="header-link">
+                    <a href="https://linkedin.com/in/andriuskvedaras" class="btn btn-inv"
+                        title="Linkedin" target="_blank">
+                        <i class="icon-linkedin-squared"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </li>
+                <li class="header-link">
+                    <a href="./andrius-kvedaras-cv.pdf" class="btn btn-inv"
+                        target="_blank">
+                            <i class="icon-download-alt"></i>
+                            <span>Download CV</span>
+                        </a>
+                </li>
+            </ul>
         </div>
-        <ul id="js-nav-list" class="nav-list nav-default">
-            <li>
-                <a href="#home" class="nav-link">Home</a>
-            </li>
-            <li>
-                <a href="#projects" class="nav-link">Projects</a>
-            </li>
-            <li>
-                <a href="#about" class="nav-link">About</a>
-            </li>
-            <li>
-                <a href="#contact" class="nav-link">Contact</a>
-            </li>
-        </ul>
     </header>
-    <main id="projects" class="projects">
+    <main class="projects">
         <section class="project">
-            <img class="project-left-side" alt="screenshot of the project"
-            src="assets/images/ve2ry.1000.jpg"
-            sizes="(max-width: 768px) 100vw, 50vw"
-            srcset="assets/images/ve2ry.500.jpg 500w,
-                assets/images/ve2ry.800.jpg 800w,
-                assets/images/ve2ry.1000.jpg 1000w"
-            >
-            <div class="project-right-side project-description-container">
-                <h2 class="project-title">Ve2ry</h2>
+            <img class="project-right-side project-image" alt="screenshot of the project"
+                src="assets/images/veery.l.jpg"
+                srcset="assets/images/veery.s.jpg 500w, assets/images/veery.m.jpg 1000w">
+            <div class="project-left-side project-description-container">
+                <h2 class="project-title">Veery</h2>
                 <p class="description">
-                    Ve2ry is a music player that can fetch and play various playlists.
+                    Veery is a music player that can fetch and play various playlists.
                 </p>
-                <a href="https://andriuskv.github.io/ve2ry" class="btn">View Project</a>
-                <a href="https://github.com/andriuskv/ve2ry" class="btn">
+                <a href="https://andriuskv.github.io/veery" class="btn">View Project</a>
+                <a href="https://github.com/andriuskv/veery" class="btn">
                     <i class="icon-github-circled"></i>
                     <span>Github</span>
                 </a>
             </div>
         </section>
         <section class="project">
-            <img class="project-right-side" alt="screenshot of the project"
+            <img class="project-left-side project-image" alt="screenshot of the project"
             src="assets/images/initium.1000.jpg"
             sizes="(max-width: 768px) 100vw, 50vw"
             srcset="assets/images/initium.500.jpg 500w,
                 assets/images/initium.800.jpg 800w,
                 assets/images/initium.1000.jpg 1000w"
             >
-            <div class="project-left-side project-description-container">
+            <div class="project-right-side project-description-container">
                 <h2 class="project-title">Initium</h2>
                 <p class="description">
                     Initium is a new tab page replacement for Google Chrome with additional features.
@@ -76,14 +89,14 @@
             </div>
         </section>
         <section class="project">
-            <img class="project-left-side" alt="screenshot of the project"
+            <img class="project-right-side project-image" alt="screenshot of the project"
             src="assets/images/editor.1000.jpg"
             sizes="(max-width: 768px) 100vw, 50vw"
             srcset="assets/images/editor.500.jpg 500w,
                 assets/images/editor.800.jpg 800w,
                 assets/images/editor.1000.jpg 1000w"
             >
-            <div class="project-right-side project-description-container">
+            <div class="project-left-side project-description-container">
                 <h2 class="project-title">Image Editor</h2>
                 <p class="description">Image Editor is a tool to resize or crop images in bulk.</p>
                 <a href="https://andriuskv.github.io/image-editor" class="btn">View Project</a>
@@ -94,14 +107,14 @@
             </div>
         </section>
         <section class="project">
-            <img class="project-right-side" alt="screenshot of the project"
+            <img class="project-left-side project-image" alt="screenshot of the project"
             src="assets/images/vocem.1000.jpg"
             sizes="(max-width: 768px) 100vw, 50vw"
             srcset="assets/images/vocem.500.jpg 500w,
                 assets/images/vocem.800.jpg 800w,
                 assets/images/vocem.1000.jpg 1000w"
             >
-            <div class="project-left-side project-description-container">
+            <div class="project-right-side project-description-container">
                 <h2 class="project-title">Vocem</h2>
                 <p class="description">Vocem is a single page application that allows to create custom polls with live results.</p>
                 <a href="https://vocem.herokuapp.com" class="btn">View Project</a>
@@ -112,32 +125,6 @@
             </div>
         </section>
     </main>
-    <div id="about" class="about">
-        <h2 class="section-title">About me</h2>
-        <p class="description">
-            I am Front-end web developer from Lithuania.
-            I'm persistent problem solver, constantly seeking out new knowledge to expand my skill set.
-        </p>
-        <a href="./andrius-kvedaras-cv.pdf" class="btn btn-inv" target="_blank">Download CV</a>
-    </div>
-    <div id="contact" class="contact">
-        <h2 class="section-title">Contact</h2>
-        <ul class="contact-links">
-            <li class="contact-link-container">
-                <a href="mailto:ikandrius@gmail.com" class="icon-mail-squared contact-link"
-                    title="Email" target="_blank"></a>
-            </li>
-            <li class="contact-link-container">
-                <a href="https://github.com/andriuskv" class="icon-github-circled contact-link"
-                    title="Github" target="_blank"></a>
-            </li>
-            <li class="contact-link-container">
-                <a href="https://linkedin.com/in/andriuskvedaras" class="icon-linkedin-squared contact-link"
-                    title="Linkedin" target="_blank"></a>
-            </li>
-        </ul>
-    </div>
-    <script src="js/main.js"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
