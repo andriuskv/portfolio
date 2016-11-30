@@ -8,9 +8,12 @@
     .btn-inv:hover {
         background-color: $light-color;
     }
-    .project-left-side,
-    .project-right-side {
-        float: none;
+    .project {
+        flex-direction: column;
+
+        &:nth-of-type(odd) .project-image {
+            order: 0;
+        }
     }
     .project-image,
     .project-description-container {

@@ -2,8 +2,10 @@
     margin-top: -60px;
 }
 .project {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     padding: 4em 2.4em;
-    overflow: hidden;
 
     &:nth-of-type(even) {
         background-color: darken($light-color, 8%);
@@ -12,24 +14,19 @@
         padding-top: 6em;
         padding-bottom: 6em;
         background-color: $light-color;
-        clip-path: polygon(0 6%, 100% 0, 100% 96%, 0 100%);
+        clip-path: polygon(0 6%, 100% 0, 100% 94%, 0 100%);
+
+        .project-image {
+            order: 1;
+        }
     }
 }
-.project-left-side {
-    float: left;
-}
-.project-right-side {
-    float: right;
-}
 .project-image {
-    width: 60%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 58%;
+    border: 1px solid #aaa;
 }
 .project-description-container {
-    width: 40%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 38%;
     color: $dark-color;
 }
 .project-title {
