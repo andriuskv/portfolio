@@ -9,7 +9,7 @@
     "start": "live-server & npm run scss && npm run watch",
     "build:css": "npm run scss && csso ./src/css/main.css ./dist/css/main.css",
     "build:assets": "cp -R ./src/assets ./dist",
-    "build:others": "cp ./src/{CNAME,index.html,favicon.png,andrius-kvedaras-cv.pdf} ./dist",
+    "build:others": "cp ./src/{CNAME,index.html,favicon.ico,andrius-kvedaras-cv.pdf} ./dist",
     "prebuild": "rm -rf ./dist && mkdir -p ./dist/{css,assets}",
     "build": "npm run build:css && npm run build:assets && npm run build:others"
   },
