@@ -49,12 +49,13 @@
 .header-links {
     display: flex;
     justify-content: center;
-    margin-top: 4px;
 }
 .header-link {
-    margin: 4px 2px;
+    display: inline-block;
+    margin: 8px 2px 0 2px;
 
     .btn {
+        display: block;
         padding: 4px 6px;
     }
 }
