@@ -1,17 +1,20 @@
-.projects {
-    margin-top: -60px;
-}
 .project {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     padding: 4em 2.4em;
 
+    @include for-tablet-landscape-down {
+        flex-direction: column;
+    }
+
     &:nth-of-type(odd) {
         background-color: $light-color;
 
-        .project-image {
-            order: 1;
+        @include for-tablet-landscape-up {
+            .project-image {
+                order: 1;
+            }
         }
     }
 }
@@ -22,6 +25,16 @@
 .project-description-container {
     width: 38%;
     color: $dark-color;
+
+    @include for-tablet-landscape-down {
+        margin-top: 1.25em;
+    }
+}
+.project-image,
+.project-description-container {
+    @include for-tablet-landscape-down {
+        width: 100%;
+    }
 }
 .project-title {
     font-size: 2em;
