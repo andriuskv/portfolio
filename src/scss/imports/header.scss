@@ -1,10 +1,22 @@
 .header {
     height: 82%;
-    background-image: url("../assets/images/header.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
+
+    @include for-phone-only {
+        background-image: url("../assets/images/header.600.jpg");
+    }
+    @include for-tablet-portrait-up {
+        background-image: url("../assets/images/header.900.jpg");
+    }
+    @include for-tablet-landscape-up {
+        background-image: url("../assets/images/header.1200.jpg");
+    }
+    @include for-desktop-up {
+        background-image: url("../assets/images/header.jpg");
+    }
 }
 .hero {
     position: relative;
