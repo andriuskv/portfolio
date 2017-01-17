@@ -2,23 +2,21 @@
   "name": "Portfolio",
   "description": "",
   "scripts": {
-    "scss": "node-sass src/scss/main.scss --source-map-embed src/css/main.css && npm run autoprefixer",
-    "autoprefixer": "postcss --use autoprefixer src/css/main.css -d src/css",
-    "watch:css": "onchange 'src/scss/*.scss' 'src/scss/imports/*.scss' -- npm run scss",
+    "scss": "node-sass --source-map-embed  src/scss/main.scss dist/css/main.css && npm run postcss",
+    "postcss": "postcss -u autoprefixer -u css-mqpacker -r dist/css/main.css",
+    "watch:css": "onchange 'src/scss/*.scss' 'src/scss/imports/*.scss' -i -- npm run scss",
     "watch": "npm run watch:css",
-    "start": "live-server & npm run scss && npm run watch",
-    "build:css": "npm run scss && csso ./src/css/main.css ./dist/css/main.css",
-    "build:assets": "cp -R ./src/assets ./dist",
-    "build:others": "cp ./src/{CNAME,index.html,favicon.ico,andrius-kvedaras-cv.pdf} ./dist",
-    "prebuild": "rm -rf ./dist && mkdir -p ./dist/{css,assets}",
-    "build": "npm run build:css && npm run build:assets && npm run build:others"
+    "start": "npm run dist && npm run watch & live-server --watch='dist'",
+    "build:css": "npm run scss && csso dist/css/main.css dist/css/main.css",
+    "dist": "rm -rf dist && mkdir -p dist/css && cp -R src/{assets,CNAME,index.html,favicon.ico,andrius-kvedaras-cv.pdf} dist",
+    "build": "npm run dist && npm run build:css"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.1",
-    "csso": "^2.3.0",
-    "live-server": "^1.1.0",
-    "node-sass": "^3.11.2",
-    "onchange": "^3.0.2",
+    "autoprefixer": "^6.6.1",
+    "csso": "^2.3.1",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.3.0",
+    "onchange": "^3.2.1",
     "postcss-cli": "^2.6.0"
   }
 }

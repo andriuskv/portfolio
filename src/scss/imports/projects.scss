@@ -1,11 +1,16 @@
 .project {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    padding: 4em 2.4em;
+    justify-content: space-around;
+    padding: 2.4em;
+
+    @include for-phone-only {
+        padding: 1em;
+    }
 
     @include for-tablet-landscape-down {
         flex-direction: column;
+        padding: 1.6em;
     }
 
     &:nth-of-type(odd) {
@@ -18,28 +23,38 @@
         }
     }
 }
+
 .project-image {
-    width: 58%;
+    width: 50%;
     border: 1px solid #aaa;
 }
+
 .project-description-container {
     width: 38%;
     color: $dark-color;
 
+    .btn {
+        display: inline-block;
+    }
+
     @include for-tablet-landscape-down {
-        margin-top: 1.25em;
+        margin-top: 0.4em;
     }
 }
+
 .project-image,
 .project-description-container {
     @include for-tablet-landscape-down {
         width: 100%;
     }
 }
+
 .project-title {
     font-size: 2em;
+    list-style: 1;
 }
+
 .description {
-    margin: 1.25em 0;
+    margin: 0.4em 0;
     font-size: 1.2em;
 }
