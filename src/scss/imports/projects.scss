@@ -1,17 +1,6 @@
-.project {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    padding: 2.4em;
-
-    @include for-phone-only {
-        padding: 1em;
-    }
-
-    @include for-tablet-landscape-down {
-        flex-direction: column;
-        padding: 1.6em;
-    }
+.project-wrapper {
+    border-top: 1px solid #aaa;
+    background-color: darken($light-color, 8%);
 
     &:nth-of-type(odd) {
         background-color: $light-color;
@@ -24,6 +13,24 @@
     }
 }
 
+.project {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.4em 0;
+
+    @include for-phone-only {
+        padding: 1em;
+    }
+
+    @include for-tablet-landscape-down {
+        flex-direction: column;
+        padding: 1.6em;
+    }
+}
+
 .project-image {
     width: 50%;
     border: 1px solid #aaa;
@@ -32,10 +39,6 @@
 .project-description-container {
     width: 38%;
     color: $dark-color;
-
-    .btn {
-        display: inline-block;
-    }
 
     @include for-tablet-landscape-down {
         margin-top: 0.4em;
@@ -50,11 +53,25 @@
 }
 
 .project-title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-family: $main-font-family;
     font-size: 2em;
-    list-style: 1;
+    line-height: 1;
 }
 
 .description {
-    margin: 0.4em 0;
+    margin-top: 8px;
+    margin-bottom: 0;
     font-size: 1.2em;
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 0;
+    color: $main-color;
+
+    &:hover {
+        color: $dark-color;
+    }
 }

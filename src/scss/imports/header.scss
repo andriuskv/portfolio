@@ -1,44 +1,34 @@
 .header {
-    height: 82%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    height: 84%;
     text-align: center;
-
-    @include for-phone-only {
-        background-image: url("../assets/images/header.600.jpg");
-    }
-    @include for-tablet-portrait-up {
-        background-image: url("../assets/images/header.900.jpg");
-    }
-    @include for-tablet-landscape-up {
-        background-image: url("../assets/images/header.1200.jpg");
-    }
-    @include for-desktop-up {
-        background-image: url("../assets/images/header.jpg");
-    }
 }
+
 .hero {
     position: relative;
-    top: 32%;
-    transform: translateY(-32%);
+    top: 50%;
+    transform: translateY(-50%);
     color: $light-color;
 }
+
 .name {
     margin-top: 0;
     margin-bottom: 0;
     font-weight: bold;
     letter-spacing: 0.25em;
 }
+
 .first-name, .last-name {
     line-height: 1;
 }
+
 .first-name {
     font-size: 1.8em;
 }
+
 .last-name {
     font-size: 2em;
 }
+
 .double-line {
     width: 22.4em;
     height: 8px;
@@ -46,28 +36,45 @@
     border-top: solid 1px $light-color;
     border-bottom: solid 1px $light-color;
 }
+
 .front {
     margin-top: 6px;
     margin-bottom: 4px;
     font-size: 1.12em;
     letter-spacing: 0.22em;
 }
+
 .line {
     width: 18.6em;
     height: 1px;
     margin: 0 auto;
     background-color: $light-color;
 }
+
 .header-links {
     display: flex;
     justify-content: center;
 }
+
 .header-link {
     display: inline-block;
-    margin: 8px 2px 0 2px;
+    margin-top: 4px;
+}
 
-    .btn {
+.header-btn {
+    display: block;
+    padding: 4px 10px;
+    color: $light-color;
+
+    &:hover {
+        color: #fff;
+    }
+
+    i {
+        font-size: 1.4em;
+    }
+
+    span {
         display: block;
-        padding: 4px 6px;
     }
 }
