@@ -18,5 +18,10 @@
     "node-sass": "^4.3.0",
     "onchange": "^3.2.1",
     "postcss-cli": "^2.6.0"
-  }
+    },
+    "browserlist": [
+        "ie >= 9",
+        "> 2%",
+        "last 2 versions"
+    ]
 }

@@ -1,12 +1,18 @@
 .header {
+    position: relative;
     height: 84%;
-    text-align: center;
+    overflow: hidden;
 }
 
 .hero {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 14em;
+    text-align: center;
     color: $light-color;
 }
 
@@ -22,15 +28,15 @@
 }
 
 .first-name {
-    font-size: 1.8em;
+    font-size: 1.6em;
 }
 
 .last-name {
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 .double-line {
-    width: 22.4em;
+    width: 20.4em;
     height: 8px;
     margin: 0 auto;
     border-top: solid 1px $light-color;
@@ -38,17 +44,13 @@
 }
 
 .front {
+    display: inline-block;
     margin-top: 6px;
-    margin-bottom: 4px;
-    font-size: 1.12em;
+    margin-bottom: 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid $light-color;
+    font-size: 1.1em;
     letter-spacing: 0.22em;
-}
-
-.line {
-    width: 18.6em;
-    height: 1px;
-    margin: 0 auto;
-    background-color: $light-color;
 }
 
 .header-links {
