@@ -17,10 +17,16 @@
 }
 
 .name {
+    display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
+    border-bottom: 1px solid $light-color;
     font-weight: bold;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.25em;
+
+    @include for-phone-only {
+        letter-spacing: 0.2em;
+    }
 }
 
 .first-name, .last-name {
@@ -28,29 +34,34 @@
 }
 
 .first-name {
-    font-size: 1.6em;
+    font-size: 1.8em;
+
+    @include for-phone-only {
+        font-size: 1.6em;
+    }
 }
 
 .last-name {
-    font-size: 1.8em;
-}
+    font-size: 2em;
 
-.double-line {
-    width: 20.4em;
-    height: 8px;
-    margin: 0 auto;
-    border-top: solid 1px $light-color;
-    border-bottom: solid 1px $light-color;
+    @include for-phone-only {
+        font-size: 1.8em;
+    }
 }
 
 .front {
     display: inline-block;
-    margin-top: 6px;
+    margin-top: 0;
     margin-bottom: 0;
+    padding-top: 6px;
     padding-bottom: 6px;
     border-bottom: 1px solid $light-color;
     font-size: 1.1em;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.22em;
+
+    @include for-phone-only {
+        letter-spacing: 0.18em;
+    }
 }
 
 .header-links {
