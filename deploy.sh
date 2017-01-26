@@ -3,6 +3,7 @@
 git config user.name "Andrius Kvedaras"
 git config user.email "ikandrius@gmail.com"
 
+ls -la
 npm run build
 cd dist
 
