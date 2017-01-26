@@ -1,8 +1,5 @@
 #!/bin/bash
 
-git clone https://github.com/AndriusKv/portfolio.git
-cd portfolio
-
 git config user.name "Andrius Kvedaras"
 git config user.email "ikandrius@gmail.com"
 
