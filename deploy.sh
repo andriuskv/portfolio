@@ -1,12 +1,21 @@
 #!/bin/bash
 set -e
 
+echo "Clone repo and get gh-pages branch"
+npm run build
+git clone https://github.com/AndriusKv/portfolio.git gh-pages
+cd ./gh-pages
+git checkout gh-pages
+cd ..
+
+echo "Copy build to gh-pages"
+rm -rf ./gh-pages/**/*
+cp -r ./dist/. ./gh-pages
+
+echo "Commit to gh-pages"
+cd ./gh-pages
 git config user.name "Travis CI"
 git config user.email "ikandrius@gmail.com"
-
-npm run build
-git checkout gh-pages --force
-rm -r andrius-kvedaras-cv.pdf CNAME favicon.ico index.html css assets && cp dist/. .
 
 git add .
 git commit -m "Deploy to GitHub Pages"
