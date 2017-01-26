@@ -4,24 +4,26 @@
   "scripts": {
     "scss": "node-sass --source-map-embed  src/scss/main.scss dist/css/main.css && npm run postcss",
     "postcss": "postcss -u autoprefixer -u css-mqpacker -r dist/css/main.css",
+    "watch:html": "onchange 'src/index.html' -- cp src/index.html dist",
     "watch:css": "onchange 'src/scss/*.scss' 'src/scss/imports/*.scss' -i -- npm run scss",
-    "watch": "npm run watch:css",
+    "watch": "npm run watch:html & npm run watch:css",
     "start": "npm run dist && npm run watch & live-server --watch='dist'",
     "build:css": "npm run scss && csso dist/css/main.css dist/css/main.css",
-    "dist": "rm -rf dist && mkdir -p dist/css && cp -R src/{assets,CNAME,index.html,favicon.ico,andrius-kvedaras-cv.pdf} dist",
+    "dist": "rm -rf ./dist && mkdir -p ./dist/css && cp -r ./src/. ./dist && rm -rf ./dist/scss",
     "build": "npm run dist && npm run build:css"
   },
   "devDependencies": {
     "autoprefixer": "^6.6.1",
+    "css-mqpacker": "^5.0.1",
     "csso": "^2.3.1",
     "live-server": "^1.2.0",
     "node-sass": "^4.3.0",
     "onchange": "^3.2.1",
     "postcss-cli": "^2.6.0"
-    },
-    "browserlist": [
-        "ie >= 9",
-        "> 2%",
-        "last 2 versions"
-    ]
+  },
+  "browserlist": [
+    "ie >= 9",
+    "> 2%",
+    "last 2 versions"
+  ]
 }
