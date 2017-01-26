@@ -1,10 +1,12 @@
 #!/bin/bash
+set -e
 
 git config user.name "Travis CI"
 git config user.email "ikandrius@gmail.com"
 
 npm run build
-cd dist
+git checkout gh-pages --force
+rm -r andrius-kvedaras-cv.pdf CNAME favicon.ico index.html css assets && cp dist/. .
 
 git add .
 git commit -m "Deploy to GitHub Pages"
