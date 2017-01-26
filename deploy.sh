@@ -3,8 +3,8 @@
 git config user.name "Travis CI"
 git config user.email "ikandrius@gmail.com"
 
+ls -la ./
 ls -la ./src
-ls -la ../src
 npm run build
 cd dist
 
