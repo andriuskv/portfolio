@@ -9,7 +9,7 @@
     "watch": "npm run watch:html & npm run watch:css",
     "start": "npm run dist && npm run watch & live-server --watch='dist'",
     "build:css": "npm run scss && csso dist/css/main.css dist/css/main.css",
-    "dist": "rm -rf ./dist && mkdir -p ./dist/css && cp -R ./src/{assets,CNAME,index.html,favicon.ico,andrius-kvedaras-cv.pdf} ./dist",
+    "dist": "rm -rf ./dist && mkdir -p ./dist/css && cp -r ./src/. ./dist && rm -rf ./dist/scss",
     "build": "npm run dist && npm run build:css"
   },
   "devDependencies": {
