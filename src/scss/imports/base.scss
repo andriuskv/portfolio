@@ -1,9 +1,11 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
+
 html, body {
     height: 100%;
 }
+
 body {
     background-color: $dark-color;
     font-size: 14px;
@@ -15,19 +17,25 @@ body {
         font-size: 18px;
     }
 }
+
 a {
     text-decoration: none;
+    transition: 0.2s color;
 }
+
 ul {
     list-style: none;
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
 }
-.btn {
-    border: 0;
-    background-color: transparent;
-    font-family: $main-font-family;
-    font-size: 1em;
-    transition: 0.2s all;
+
+svg {
+    width: 24px;
+    height: 24px;
+}
+
+.icon {
+    fill: $light-color;
+    fill: currentColor;
 }
