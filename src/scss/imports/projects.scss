@@ -33,7 +33,7 @@
 
 .project-image {
     width: 50%;
-    border: 1px solid #aaa;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .project-description-container {
@@ -41,7 +41,7 @@
     color: $dark-color;
 
     @include for-tablet-landscape-down {
-        margin-top: 0.4em;
+        margin-top: 0.8em;
     }
 }
 
@@ -54,24 +54,26 @@
 
 .project-title {
     margin-top: 0;
-    margin-bottom: 8px;
-    font-family: $main-font-family;
+    margin-bottom: 0;
     font-size: 2em;
     line-height: 1;
 }
 
-.description {
-    margin-top: 8px;
-    margin-bottom: 0;
-    font-size: 1.2em;
+.project-links {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
 }
 
-.project-btn {
-    display: inline-block;
-    padding: 0;
+.project-link {
     color: $main-color;
 
     &:hover {
         color: $dark-color;
     }
+}
+
+.description {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.2em;
 }

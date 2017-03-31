@@ -6,14 +6,12 @@
 
 .hero {
     position: absolute;
-    top: 0;
+    top: 50%;
     right: 0;
-    bottom: 0;
     left: 0;
-    margin: auto;
-    height: 14em;
     text-align: center;
     color: $light-color;
+    transform: translateY(-50%);
 }
 
 .name {
@@ -23,14 +21,11 @@
     border-bottom: 1px solid $light-color;
     font-weight: bold;
     letter-spacing: 0.25em;
+    line-height: 1;
 
     @include for-phone-only {
         letter-spacing: 0.2em;
     }
-}
-
-.first-name, .last-name {
-    line-height: 1;
 }
 
 .first-name {
@@ -67,27 +62,19 @@
 .header-links {
     display: flex;
     justify-content: center;
-}
-
-.header-link {
-    display: inline-block;
     margin-top: 4px;
 }
 
-.header-btn {
+.header-link-container {
+    display: inline-block;
+}
+
+.header-link {
     display: block;
-    padding: 4px 10px;
+    margin: 0 10px;
     color: $light-color;
 
     &:hover {
         color: #fff;
-    }
-
-    i {
-        font-size: 1.4em;
-    }
-
-    span {
-        display: block;
     }
 }
