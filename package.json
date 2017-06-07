@@ -2,29 +2,27 @@
   "name": "Portfolio",
   "description": "",
   "scripts": {
-    "scss": "node-sass --source-map-embed  src/scss/main.scss dist/css/main.css && npm run postcss",
-    "postcss": "postcss -u autoprefixer -u css-mqpacker -r dist/css/main.css",
+    "scss": "node-sass --source-map-embed src/scss/main.scss dist/main.css && npm run postcss",
+    "postcss": "postcss -u autoprefixer -r dist/main.css",
     "watch:html": "onchange 'src/index.html' -- cp src/index.html dist",
     "watch:css": "onchange 'src/scss/*.scss' 'src/scss/imports/*.scss' -i -- npm run scss",
     "watch": "npm run watch:html & npm run watch:css",
     "start": "npm run dist && npm run watch & live-server dist",
-    "build:css": "npm run scss && csso dist/css/main.css dist/css/main.css",
-    "dist": "rm -rf ./dist && mkdir -p ./dist/css && cp -r ./src/. ./dist && rm -rf ./dist/scss",
+    "build:css": "npm run scss && csso dist/main.css dist/main.css",
+    "dist": "rm -rf dist && mkdir -p dist && cp -r src/. dist && rm -rf dist/scss",
     "build": "npm run dist && npm run build:css"
   },
   "devDependencies": {
-    "autoprefixer": "^7.0.1",
-    "css-mqpacker": "^6.0.0",
+    "autoprefixer": "^7.1.1",
     "csso": "^3.1.1",
     "csso-cli": "^1.0.0",
     "live-server": "^1.2.0",
-    "node-sass": "^4.5.2",
+    "node-sass": "^4.5.3",
     "onchange": "^3.2.1",
     "postcss-cli": "^4.0.0"
   },
-  "browserlist": [
-    "ie >= 9",
-    "> 2%",
-    "last 2 versions"
+  "browserslist": [
+    "last 2 versions",
+    "IE >= 11"
   ]
 }

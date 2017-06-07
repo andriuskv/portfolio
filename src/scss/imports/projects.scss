@@ -5,10 +5,8 @@
     &:nth-of-type(odd) {
         background-color: $light-color;
 
-        @include for-tablet-landscape-up {
-            .project-image {
-                order: 1;
-            }
+        .project-image {
+            order: 1;
         }
     }
 }
@@ -16,38 +14,37 @@
 .project {
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2.4em 0;
+    padding: 2.4em;
 
-    @include for-phone-only {
-        padding: 1em;
+    @include breakpoint-small {
+        display: block;
     }
 
-    @include for-tablet-landscape-down {
-        flex-direction: column;
-        padding: 1.6em;
+    @include breakpoint-smallest {
+        padding: 1em;
     }
 }
 
 .project-image {
-    width: 50%;
+    width: 52%;
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .project-description-container {
-    width: 38%;
+    width: 42%;
     color: $dark-color;
 
-    @include for-tablet-landscape-down {
+    @include breakpoint-small {
         margin-top: 0.8em;
     }
 }
 
 .project-image,
 .project-description-container {
-    @include for-tablet-landscape-down {
+    @include breakpoint-small {
         width: 100%;
     }
 }
@@ -55,8 +52,16 @@
 .project-title {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 2em;
+    font-size: 1.8em;
     line-height: 1;
+
+    @include breakpoint-small {
+        font-size: 1.6em;
+    }
+
+    @include breakpoint-smallest {
+        font-size: 1.4em;
+    }
 }
 
 .project-links {
@@ -66,6 +71,7 @@
 
 .project-link {
     color: $main-color;
+    font-size: 0.875em;
 
     &:hover {
         color: $dark-color;
@@ -75,5 +81,5 @@
 .description {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 1.2em;
+    font-size: 1em;
 }
