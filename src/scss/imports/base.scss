@@ -7,18 +7,17 @@ html, body {
 }
 
 body {
-    background-color: $dark-color;
+    background-color: $light-color;
     font-family: $main-font-family;
-    font-size: 16px;
+    font-size: 18px;
 
     @include breakpoint-smallest {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
 a {
     text-decoration: none;
-    transition: 0.2s color;
 }
 
 ul {
@@ -28,9 +27,38 @@ ul {
     margin-bottom: 0;
 }
 
-.icon {
-    width: 24px;
-    height: 24px;
-    fill: $light-color;
-    fill: currentColor;
+.block-title {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1.6em;
+    color: $dark-color;
+    text-align: center;
+
+    &::after {
+        content: "";
+        display: block;
+        margin: 8px auto;
+        width: 100px;
+        height: 4px;
+        background-color: $main-color;
+    }
+}
+
+.contact-items {
+    display: flex;
+    justify-content: center;
+    padding: 2em 1em 4em 1em;
+}
+
+.contact-item {
+    margin: 0 16px;
+}
+
+.contact-link {
+    color: $dark-color;
+    transition: color 0.2s;
+
+    &:hover {
+        color: $main-color;
+    }
 }
