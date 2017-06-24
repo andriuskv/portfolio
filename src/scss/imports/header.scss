@@ -1,7 +1,5 @@
 .header {
     position: relative;
-    display: flex;
-    align-items: center;
     height: 84%;
 }
 
@@ -69,7 +67,8 @@
 }
 
 .title-container {
-    margin-top: 4em;
+    position: absolute;
+    top: 50%;
     padding-left: 2em;
     max-width: 60%;
 
