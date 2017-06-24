@@ -1,72 +1,94 @@
 .header {
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 84%;
 }
 
-.hero {
-    text-align: center;
-    color: $light-color;
+.t-1, .t-2, .t-3, .t-4, .t-5 {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-.name {
-    letter-spacing: 0.2em;
+.t-1 {
+    border-bottom: 12.5vh solid transparent;
+    border-right: 100vw solid lighten($main-color, 4%);
 }
 
-.name, .front {
-    margin-top: 0;
-    margin-bottom: 0;
-    border-bottom: 1px solid $light-color;
-    line-height: 1;
+.t-2 {
+    border-bottom: 25vh solid transparent;
+    border-right: 75vw solid lighten($main-color, 2%);
 }
 
-.first-name {
-    font-size: 1.8em;
+.t-3 {
+    border-bottom: 50vh solid transparent;
+    border-right: 50vw solid $main-color;
+}
 
-    @include breakpoint-smallest {
-        font-size: 1.6em;
+.t-4 {
+    border-bottom: 75vh solid transparent;
+    border-right: 25vw solid darken($main-color, 2%);
+}
+
+.t-5 {
+    border-bottom: 100vh solid transparent;
+    border-right: 12.5vw solid darken($main-color, 4%);
+}
+
+.header-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.header-nav-items {
+    display: flex;
+    padding-top: 16px;
+
+    @include breakpoint-small {
+        flex-direction: column;
+        padding-top: 8px;
     }
 }
 
-.last-name {
-    font-size: 2em;
+.header-nav-item {
+    margin-right: 16px;
+    font-size: 1em;
+    text-align: right;
 
-    @include breakpoint-smallest {
+    @include breakpoint-small {
+        margin-bottom: 8px;
+        margin-right: 8px;
+        font-size: 0.875em;
+    }
+}
+
+.header-nav-link {
+    color: $light-color;
+}
+
+.title-container {
+    margin-top: 4em;
+    padding-left: 2em;
+    max-width: 60%;
+
+    @include breakpoint-small {
+        padding-left: 1em;
+        max-width: 84%;
+    }
+}
+
+.title {
+    color: $dark-color;
+    font-size: 2em;
+    line-height: 1.2;
+
+    @include breakpoint-small {
         font-size: 1.8em;
     }
-}
-
-.front {
-    display: inline-block;
-    padding-top: 8px;
-    padding-bottom: 7px;
-    font-size: 1em;
-    letter-spacing: 0.22em;
-    font-weight: normal;
 
     @include breakpoint-smallest {
-        letter-spacing: 0.18em;
-    }
-}
-
-.header-links {
-    display: flex;
-    justify-content: center;
-    margin-top: 4px;
-}
-
-.header-link-container {
-    display: inline-block;
-}
-
-.header-link {
-    display: block;
-    margin: 0 10px;
-    color: $light-color;
-    font-size: 0.875em;
-
-    &:hover {
-        color: #fff;
+        font-size: 1.4em;
     }
 }

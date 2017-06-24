@@ -1,14 +1,7 @@
-.project-wrapper {
-    border-top: 1px solid #aaa;
-    background-color: darken($light-color, 8%);
-
-    &:nth-of-type(odd) {
-        background-color: $light-color;
-
-        .project-image {
-            order: 1;
-        }
-    }
+.project-wrapper:nth-of-type(odd) {
+    .project-image {
+       order: 1;
+   }
 }
 
 .project {
@@ -30,7 +23,8 @@
 
 .project-image {
     width: 52%;
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 16px 40px transparentize($main-color, 0.88),
+                0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project-description-container {
@@ -51,7 +45,7 @@
 
 .project-title {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 1em;
     font-size: 1.8em;
     line-height: 1;
 
@@ -61,25 +55,35 @@
 
     @include breakpoint-smallest {
         font-size: 1.4em;
-    }
-}
-
-.project-links {
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
-}
-
-.project-link {
-    color: $main-color;
-    font-size: 0.875em;
-
-    &:hover {
-        color: $dark-color;
+        margin-bottom: 0;
     }
 }
 
 .description {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 1.2em;
     font-size: 1em;
+    line-height: 1.4;
+
+    @include breakpoint-smallest {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+.project-link {
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: $main-color;
+    font-size: 0.875em;
+    color: $light-color;
+    transition: background-color 0.2s;
+
+    &:first-of-type {
+        margin-right: 8px;
+    }
+
+    &:hover {
+        background-color: darken($main-color, 6%);
+    }
 }
