@@ -3,7 +3,7 @@
     height: 84%;
 }
 
-.t-1, .t-2, .t-3, .t-4, .t-5 {
+.header-nav, .t {
     position: absolute;
     top: 0;
     right: 0;
@@ -34,12 +34,6 @@
     border-right: 12.5vw solid darken($main-color, 4%);
 }
 
-.header-nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
 .header-nav-items {
     display: flex;
     padding-top: 16px;
@@ -68,13 +62,13 @@
 
 .title-container {
     position: absolute;
-    top: 50%;
+    bottom: 20%;
     padding-left: 2em;
     max-width: 60%;
 
     @include breakpoint-small {
         padding-left: 1em;
-        max-width: 84%;
+        max-width: 88%;
     }
 }
 
