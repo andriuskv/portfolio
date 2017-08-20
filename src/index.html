@@ -7,135 +7,139 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular&lang=en">
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <header id="home" class="header">
-        <div class="t t-1"></div>
-        <div class="t t-2"></div>
-        <div class="t t-3"></div>
-        <div class="t t-4"></div>
-        <div class="t t-5"></div>
-        <nav class="header-nav">
-            <ul class="header-nav-items">
-                <li class="header-nav-item">
-                    <a href="#home" class="header-nav-link">Home</a>
+    <header class="header">
+         <div class="header-intro">
+            <h1>Hello.</h1>
+            <h2>I am Andrius Kvedaras.</h2>
+            <h3>An aspiring Front-end Developer.</h3>
+            <ul class="header-links">
+                <li>
+                    <a href="mailto:ikandrius@gmail.com" class="header-link" title="Email">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z">
+                        </svg>
+                    </a>
                 </li>
-                <li class="header-nav-item">
-                    <a href="#projects" class="header-nav-link">Projects</a>
+                <li>
+                    <a href="https://github.com/andriuskv" class="header-link" title="GitHub">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z">
+                        </svg>
+                    </a>
                 </li>
-                <li class="header-nav-item">
-                    <a href="#contact" class="header-nav-link">Contact</a>
+                <li>
+                    <a href="https://linkedin.com/in/andriuskvedaras" class="header-link" title="LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z">
+                        </svg>
+
+                    </a>
                 </li>
-                <li class="header-nav-item">
-                    <a href="./andrius-kvedaras-resume.pdf" class="header-nav-link">Resume</a>
+                <li>
+                    <a href="./resume.pdf" class="header-link" title="Resume">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M13,9H18.5L13,3.5V9M6,2H14L20,8V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V4C4,2.89 4.89,2 6,2M15,18V16H6V18H15M18,14V12H6V14H18Z">
+                        </svg>
+                    </a>
                 </li>
             </ul>
-        </nav>
-         <div class="title-container">
-            <h1 class="title">Hi, I'm Andrius Kvedaras.<br>I'm a Front-end Developer.</h1>
         </div>
     </header>
-    <main>
-        <section id="projects">
-            <h3 class="block-title">Projects</h3>
-            <section class="project-wrapper">
-                <div class="project">
-                    <img class="project-image" alt="" sizes="100vw"
-                        srcset="assets/images/nimus-cards.500.jpg 500w,
-                            assets/images/nimus-cards.882.jpg 882w,
-                            assets/images/nimus-cards.jpg 1366w"
-                        src="assets/images/nimus-cards.jpg">
-                    <div class="project-description-container">
-                        <h4 class="project-title">NimusCards</h4>
-                        <p class="description">
-                            Easy to use web based flashcard application with the goal of giving users an ability to create, edit, and practice flashcards that are organized in decks.
-                        </p>
-                        <div>
-                            <a href="https://andriuskv.github.io/nimus-cards" class="project-link">View Project</a>
-                            <a href="https://github.com/andriuskv/nimus-cards" class="project-link">GitHub</a>
-                        </div>
+                            <!-- Responsive audio player that can play audio tracks from various sources. -->
+    <main class="projects">
+        <h3 class="block-title">Projects</h3>
+        <section class="project-wrapper">
+            <div class="project">
+                <img class="project-image" alt="" sizes="100vw"
+                    srcset="assets/images/veery.512.jpg 512w,
+                        assets/images/veery.768.jpg 768w,
+                        assets/images/veery.jpg 1366w"
+                    src="assets/images/veery.jpg">
+                <div class="project-description-container">
+                    <h4 class="project-title">Veery</h4>
+                    <p class="description">A music player that allows users to upload and play various format audio files as well as videos and playlists imported from YouTube.</p>
+                    <div>
+                        <a href="https://andriuskv.github.io/veery" class="project-link">View Project</a>
+                        <a href="https://github.com/andriuskv/veery" class="project-link">GitHub</a>
                     </div>
                 </div>
-            </section>
-            <section class="project-wrapper">
-                <div class="project">
-                    <img class="project-image" alt="" sizes="100vw"
-                        srcset="assets/images/veery.500.jpg 500w,
-                            assets/images/veery.784.jpg 784w,
-                            assets/images/veery.jpg 1366w"
-                        src="assets/images/veery.jpg">
-                    <div class="project-description-container">
-                        <h4 class="project-title">Veery</h4>
-                        <p class="description">
-                            Responsive audio player that can play audio tracks from various sources.
-                        </p>
-                        <div>
-                            <a href="https://andriuskv.github.io/veery" class="project-link">View Project</a>
-                            <a href="https://github.com/andriuskv/veery" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="project-wrapper">
-                <div class="project">
-                    <img class="project-image" alt="" sizes="100vw"
-                        srcset="assets/images/initium.500.jpg 500w,
-                            assets/images/initium.881.jpg 881w,
-                            assets/images/initium.jpg 1366w"
-                        src="assets/images/initium.jpg">
-                    <div class="project-description-container">
-                        <h4 class="project-title">Initium</h4>
-                        <p class="description">New tab page extension for Google Chrome that provides additional features.</p>
-                        <div>
-                            <a href="https://chrome.google.com/webstore/detail/initium/jmefobebfekofkbpfmjkmhjgaaaojkml" class="project-link">View Project</a>
-                            <a href="https://github.com/andriuskv/initium" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="project-wrapper">
-                <div class="project">
-                    <img class="project-image" alt="" src="assets/images/editor.l.jpg" srcset="assets/images/editor.s.jpg 500w, assets/images/editor.m.jpg 1000w" sizes="100vw">
-                    <div class="project-description-container">
-                        <h4 class="project-title">Image Editor</h4>
-                        <p class="description">Web based image resizer and cropper.</p>
-                        <div>
-                            <a href="https://andriuskv.github.io/image-editor" class="project-link">View Project</a>
-                            <a href="https://github.com/andriuskv/image-editor" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="project-wrapper">
-                <div class="project">
-                    <img class="project-image" alt="" src="assets/images/vocem.1000.jpg" srcset="assets/images/vocem.500.jpg 500w, assets/images/vocem.800.jpg 800w, assets/images/vocem.1000.jpg 1000w" sizes="100vw">
-                    <div class="project-description-container">
-                        <h4 class="project-title">Vocem</h4>
-                        <p class="description">
-                            Responsive single page application that allows authenticated users to create real-time polls.
-                        </p>
-                        <div>
-                            <a href="https://vocem.herokuapp.com" class="project-link">View Project</a>
-                            <a href="https://github.com/andriuskv/vocem" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            </div>
         </section>
-        <section id="contact">
-            <h3 class="block-title">Contact</h3>
-            <ul class="contact-items">
-                <li class="contact-item">
-                    <a href="mailto:ikandrius@gmail.com" class="contact-link">Email</a>
-                </li>
-                <li class="contact-item">
-                    <a href="https://github.com/andriuskv" class="contact-link">GitHub</a>
-                </li>
-                <li class="contact-item">
-                    <a href="https://linkedin.com/in/andriuskvedaras" class="contact-link">LinkedIn</a>
-                </li>
-            </ul>
+        <section class="project-wrapper">
+            <div class="project">
+                <img class="project-image" alt="" sizes="100vw"
+                    srcset="assets/images/initium.500.jpg 500w,
+                        assets/images/initium.881.jpg 881w,
+                        assets/images/initium.jpg 1366w"
+                    src="assets/images/initium.jpg">
+                <div class="project-description-container">
+                    <h4 class="project-title">Initium</h4>
+                    <p class="description">New tab page extension for Google Chrome that provides additional features.</p>
+                    <div>
+                        <a href="https://chrome.google.com/webstore/detail/initium/jmefobebfekofkbpfmjkmhjgaaaojkml" class="project-link">View Project</a>
+                        <a href="https://github.com/andriuskv/initium" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="project-wrapper">
+            <div class="project">
+                <img class="project-image" alt="" sizes="100vw"
+                    srcset="assets/images/nimus-cards.500.jpg 500w,
+                        assets/images/nimus-cards.882.jpg 882w,
+                        assets/images/nimus-cards.jpg 1366w"
+                    src="assets/images/nimus-cards.jpg">
+                <div class="project-description-container">
+                    <h4 class="project-title">NimusCards</h4>
+                    <p class="description">
+                        Easy to use web based flashcard application with the goal of giving users an ability to create, edit and practice flashcards
+                        that are organized in decks.
+                    </p>
+                    <div>
+                        <a href="https://andriuskv.github.io/nimus-cards" class="project-link">View Project</a>
+                        <a href="https://github.com/andriuskv/nimus-cards" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="project-wrapper">
+            <div class="project">
+                <img class="project-image" alt="" sizes="100vw"
+                    srcset="assets/images/editor.s.jpg 500w,
+                        assets/images/editor.m.jpg 1000w"
+                    src="assets/images/editor.l.jpg">
+                <div class="project-description-container">
+                    <h4 class="project-title">Image Editor</h4>
+                    <p class="description">Web based image resizer and cropper.</p>
+                    <div>
+                        <a href="https://andriuskv.github.io/image-editor" class="project-link">View Project</a>
+                        <a href="https://github.com/andriuskv/image-editor" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="project-wrapper">
+            <div class="project">
+                <img class="project-image" alt="" sizes="100vw"
+                    srcset="assets/images/vocem.500.jpg 500w,
+                        assets/images/vocem.800.jpg 800w,
+                        assets/images/vocem.1000.jpg 1000w"
+                    src="assets/images/vocem.1000.jpg">
+                <div class="project-description-container">
+                    <h4 class="project-title">Vocem</h4>
+                    <p class="description">
+                        Responsive single page application that allows authenticated users to create real-time polls.
+                    </p>
+                    <div>
+                        <a href="https://vocem.herokuapp.com" class="project-link">View Project</a>
+                        <a href="https://github.com/andriuskv/vocem" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <script>
