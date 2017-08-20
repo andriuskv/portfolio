@@ -1,15 +1,13 @@
 .header {
-    position: relative;
     height: 100%;
     background-color: $dark-color;
 }
 
 .header-intro {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 400px;
-    transform: translate(-50%, -50%);
+    position: relative;
+    top: 20%;
+    width: 400px;
+    margin: 0 auto;
     color: $light-color;
 
     h1 {
@@ -27,7 +25,7 @@
     }
 
     @include breakpoint-smallest {
-        min-width: 280px;
+        width: 280px;
 
         h1 {
             font-size: 3.4em;
@@ -44,14 +42,17 @@
 }
 
 .header-links {
-    display: flex;
     margin-top: 8px;
+
+    li {
+        display: inline-block;
+        margin-right: 4px;
+    }
 }
 
 .header-link {
     display: block;
     padding: 2px;
-    margin-right: 8px;
     color: $light-color;
     transition: color 0.2s;
 
