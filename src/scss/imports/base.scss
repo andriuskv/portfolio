@@ -9,11 +9,26 @@ html, body {
 body {
     background-color: $light-color;
     font-family: $main-font-family;
+    color: $dark-color;
     font-size: 18px;
 
     @include breakpoint-smallest {
         font-size: 16px;
     }
+}
+
+h1, h2, h3, h4, {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+    line-height: 1;
+}
+
+svg {
+    width: 24px;
+    height: 24px;
+    fill: $light-color;
+    fill: currentColor;
 }
 
 a {
@@ -28,39 +43,19 @@ ul {
 }
 
 .block-title {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-size: 1.6em;
-    color: $dark-color;
+    font-size: 2em;
     text-align: center;
 
     &::after {
         content: "";
         display: block;
-        margin: 8px auto;
-        width: 100px;
-        height: 4px;
+        margin: 8px auto 0 auto;
+        width: 120px;
+        height: 2px;
         background-color: $main-color;
     }
-}
 
-.contact-items {
-    display: flex;
-    justify-content: center;
-    padding: 2em 1em 4em 1em;
-    text-align: center;
-}
-
-.contact-item {
-    display: inline-block;
-    margin: 0 16px;
-}
-
-.contact-link {
-    color: $dark-color;
-    transition: color 0.2s;
-
-    &:hover {
-        color: $main-color;
+    @include breakpoint-smallest {
+        margin-bottom: 1em;
     }
 }

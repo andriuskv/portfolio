@@ -1,87 +1,61 @@
 .header {
     position: relative;
-    height: 84%;
+    height: 100%;
+    background-color: $dark-color;
 }
 
-.header-nav, .t {
+.header-intro {
     position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.t-1 {
-    border-bottom: 12.5vh solid transparent;
-    border-right: 100vw solid lighten($main-color, 4%);
-}
-
-.t-2 {
-    border-bottom: 25vh solid transparent;
-    border-right: 75vw solid lighten($main-color, 2%);
-}
-
-.t-3 {
-    border-bottom: 50vh solid transparent;
-    border-right: 50vw solid $main-color;
-}
-
-.t-4 {
-    border-bottom: 75vh solid transparent;
-    border-right: 25vw solid darken($main-color, 2%);
-}
-
-.t-5 {
-    border-bottom: 100vh solid transparent;
-    border-right: 12.5vw solid darken($main-color, 4%);
-}
-
-.header-nav-items {
-    display: flex;
-    padding-top: 16px;
-
-    @include breakpoint-small {
-        flex-direction: column;
-        padding-top: 8px;
-    }
-}
-
-.header-nav-item {
-    margin-right: 16px;
-    font-size: 1em;
-    text-align: right;
-
-    @include breakpoint-small {
-        margin-bottom: 8px;
-        margin-right: 8px;
-        font-size: 0.875em;
-    }
-}
-
-.header-nav-link {
+    top: 50%;
+    left: 50%;
+    min-width: 400px;
+    transform: translate(-50%, -50%);
     color: $light-color;
-}
 
-.title-container {
-    position: absolute;
-    bottom: 20%;
-    padding-left: 2em;
-    max-width: 60%;
-
-    @include breakpoint-small {
-        padding-left: 1em;
-        max-width: 88%;
+    h1 {
+        margin-bottom: 16px;
+        font-size: 4em;
     }
-}
 
-.title {
-    color: $dark-color;
-    font-size: 2em;
-    line-height: 1.2;
+    h2 {
+        font-size: 2em;
+        margin-bottom: 8px;
+    }
 
-    @include breakpoint-small {
-        font-size: 1.8em;
+    h3 {
+        font-size: 1.4em;
     }
 
     @include breakpoint-smallest {
-        font-size: 1.4em;
+        min-width: 280px;
+
+        h1 {
+            font-size: 3.4em;
+        }
+
+        h2 {
+            font-size: 1.6em;
+        }
+
+        h3 {
+            font-size: 1.1em;
+        }
+    }
+}
+
+.header-links {
+    display: flex;
+    margin-top: 8px;
+}
+
+.header-link {
+    display: block;
+    padding: 2px;
+    margin-right: 8px;
+    color: $light-color;
+    transition: color 0.2s;
+
+    &:hover {
+        color: $main-color;
     }
 }

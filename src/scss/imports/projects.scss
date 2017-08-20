@@ -1,3 +1,8 @@
+.projects {
+    padding-top: 2.4em;
+    padding-bottom: 2.4em;
+}
+
 .project-wrapper:nth-of-type(odd) {
     .project-image {
        order: 1;
@@ -44,10 +49,8 @@
 }
 
 .project-title {
-    margin-top: 0;
     margin-bottom: 1em;
     font-size: 1.8em;
-    line-height: 1;
 
     @include breakpoint-small {
         font-size: 1.6em;
@@ -72,8 +75,7 @@
 }
 
 .project-link {
-    padding: 6px 12px;
-    border-radius: 4px;
+    padding: 4px 16px;
     background-color: $main-color;
     font-size: 0.875em;
     color: $light-color;
