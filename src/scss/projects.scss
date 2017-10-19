@@ -35,47 +35,39 @@
 .project-description-container {
     width: 42%;
     color: $dark-color;
-
-    @include breakpoint-small {
-        margin-top: 0.8em;
-    }
 }
 
 .project-image,
 .project-description-container {
     @include breakpoint-small {
+        display: block;
         width: 100%;
     }
 }
 
 .project-title {
-    margin-bottom: 1em;
     font-size: 1.8em;
 
     @include breakpoint-small {
+        margin-top: 1em;
         font-size: 1.6em;
     }
 
     @include breakpoint-smallest {
         font-size: 1.4em;
-        margin-bottom: 0;
     }
 }
 
 .description {
-    margin-top: 0;
+    margin-top: 1.2em;
     margin-bottom: 1.2em;
     font-size: 1em;
     line-height: 1.4;
-
-    @include breakpoint-smallest {
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
 }
 
 .project-link {
-    padding: 4px 16px;
+    display: inline-block;
+    padding: 6px 16px;
     background-color: $main-color;
     font-size: 0.875em;
     color: $light-color;
