@@ -1,83 +1,69 @@
 .projects {
-    padding-top: 2.4em;
     padding-bottom: 2.4em;
-}
+    margin-top: -2em;
 
-.project-wrapper:nth-of-type(odd) {
-    .project-image {
-       order: 1;
-   }
+    @include breakpoint-small {
+        margin-top: 0;
+    }
 }
 
 .project {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2.4em;
+    padding-top: 2.4em;
+
+    &:nth-of-type(odd) .project-image {
+        order: 1;
+        margin-left: 2.4em;
+        margin-right: 0;
+
+        @include breakpoint-small {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
 
     @include breakpoint-small {
         display: block;
-    }
-
-    @include breakpoint-smallest {
-        padding: 1em;
     }
 }
 
 .project-image {
-    width: 52%;
-    box-shadow: 0 16px 40px transparentize($main-color, 0.88),
-                0 8px 16px rgba(0, 0, 0, 0.2);
-}
+    width: calc(50% + 1.2em);
+    margin-left: 0;
+    margin-right: 2.4em;
 
-.project-description-container {
-    width: 42%;
-    color: $dark-color;
-}
-
-.project-image,
-.project-description-container {
     @include breakpoint-small {
         display: block;
         width: 100%;
+        margin: 0 0 1.2em 0;
     }
 }
 
 .project-title {
-    font-size: 1.8em;
-
-    @include breakpoint-small {
-        margin-top: 1em;
-        font-size: 1.6em;
-    }
-
-    @include breakpoint-smallest {
-        font-size: 1.4em;
-    }
+    font-size: 1.4em;
 }
 
 .description {
     margin-top: 1.2em;
     margin-bottom: 1.2em;
     font-size: 1em;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .project-link {
     display: inline-block;
     padding: 6px 16px;
-    background-color: $main-color;
+    margin-right: 8px;
+    border: 1px solid $main-color;
+    background-color: transparent;
     font-size: 0.875em;
-    color: $light-color;
-    transition: background-color 0.2s;
-
-    &:first-of-type {
-        margin-right: 8px;
-    }
+    color: $main-color;
+    letter-spacing: 1px;
+    transition: background-color 0.1s, color 0.1s;
 
     &:hover {
-        background-color: darken($main-color, 6%);
+        background-color: $main-color;
+        color: $dark-color;
     }
 }
