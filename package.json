@@ -1,9 +1,9 @@
 {
-  "name": "Portfolio",
+  "name": "portfolio",
   "description": "",
   "scripts": {
     "scss": "node-sass --source-map-embed src/scss/index.scss dist/main.css && npm run postcss",
-    "postcss": "postcss -u autoprefixer -r dist/main.css",
+    "postcss": "postcss -u autoprefixer -u css-mqpacker -r dist/main.css",
     "watch:html": "onchange 'src/index.html' -- cp src/index.html dist",
     "watch:css": "onchange 'src/scss/*.scss' -i -- npm run scss",
     "watch": "npm run watch:html & npm run watch:css",
@@ -11,20 +11,25 @@
     "build:css": "npm run scss && csso dist/main.css dist/main.css",
     "images": "imagemin src/images/* -o=dist/images",
     "predist": "rm -rf dist && mkdir -p dist",
-    "dist": "cp -t dist src/CNAME src/favicon.ico src/index.html src/resume.pdf && npm run images",
+    "dist": "cp -t dist src/CNAME src/favicon.png src/index.html src/resume.pdf && npm run images",
     "build": "npm run dist && npm run build:css"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.5",
+    "autoprefixer": "^8.0.0",
+    "css-mqpacker": "^6.0.2",
     "csso-cli": "^1.1.0",
     "imagemin-cli": "^3.0.0",
     "live-server": "^1.2.0",
-    "node-sass": "^4.5.3",
-    "onchange": "^3.2.1",
-    "postcss-cli": "^4.1.1"
+    "node-sass": "^4.7.2",
+    "onchange": "^3.3.0",
+    "postcss-cli": "^5.0.0"
   },
   "browserslist": [
-    "last 2 versions",
-    "IE >= 11"
+    "last 4 chrome versions",
+    "last 4 firefox versions",
+    "last 2 edge versions",
+    "last 2 and_chr versions",
+    "last 2 safari versions",
+    "last 2 ios versions"
   ]
 }
