@@ -9,18 +9,20 @@
     "watch": "npm run watch:html & npm run watch:css",
     "start": "npm run dist && npm run watch & live-server dist",
     "build:css": "npm run scss && csso dist/main.css dist/main.css",
+    "build:js": "minify src/sw.js src/main.js --out-dir dist",
     "images": "imagemin src/images/* -o=dist/images",
     "predist": "rm -rf dist && mkdir -p dist",
-    "dist": "cp -t dist src/CNAME src/favicon.png src/index.html src/resume.pdf && npm run images",
-    "build": "npm run dist && npm run build:css"
+    "dist": "cp -t dist src/CNAME src/favicon.png src/index.html src/resume.pdf src/main.js src/sw.js && npm run images",
+    "build": "npm run dist && npm run build:css && npm run build:js"
   },
   "devDependencies": {
-    "autoprefixer": "^8.0.0",
+    "autoprefixer": "^8.2.0",
+    "babel-minify": "^0.3.0",
     "css-mqpacker": "^6.0.2",
     "csso-cli": "^1.1.0",
     "imagemin-cli": "^3.0.0",
     "live-server": "^1.2.0",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.8.3",
     "onchange": "^3.3.0",
     "postcss-cli": "^5.0.0"
   },

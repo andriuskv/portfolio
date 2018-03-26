@@ -74,3 +74,24 @@ ul {
         background-color: $main-color;
     }
 }
+
+.popup {
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+    opacity: 0;
+    visibility: hidden;
+    padding: 16px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background-color: $main-color;
+    color: $dark-color;
+    font-size: 0.875em;
+    transform: translateX(calc(100% + 10px));
+    transition: 0.2s opacity, 0.2s visibility, 0.2s transform;
+
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
