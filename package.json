@@ -16,8 +16,8 @@
     "build": "npm run dist && npm run build:css && npm run build:js"
   },
   "devDependencies": {
-    "autoprefixer": "^8.2.0",
-    "babel-minify": "^0.3.0",
+    "autoprefixer": "^8.3.0",
+    "babel-minify": "^0.4.0",
     "css-mqpacker": "^6.0.2",
     "csso-cli": "^1.1.0",
     "imagemin-cli": "^3.0.0",
