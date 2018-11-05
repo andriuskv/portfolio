@@ -1,7 +1,5 @@
 .header {
     position: relative;
-    display: flex;
-    align-items: center;
     height: 88%;
 }
 
@@ -36,16 +34,17 @@
 .header-intro {
     z-index: 1;
     position: relative;
-    flex-grow: 1;
+    top: 28%;
     color: $light-color;
+    text-align: center;
 
     @include breakpoint-small {
-        flex-grow: 0;
+        top: 45%;
+        transform: translateY(-50%);
     }
 }
 
 .header-title {
-    margin-bottom: 8px;
     font-size: 2.2em;
 
     @include breakpoint-smallest {
@@ -54,19 +53,16 @@
 }
 
 .header-subtitle {
+    margin: 12px 0;
     font-size: 1.2em;
-
-    @include breakpoint-smallest {
-        font-size: 1em;
-    }
 }
 
 .header-links {
     display: flex;
-    margin-top: 8px;
+    justify-content: center;
 
-    li {
-        margin-right: 8px;
+    li:not(:last-of-type) {
+        margin-right: 12px;
     }
 }
 
