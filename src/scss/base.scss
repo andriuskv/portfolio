@@ -46,19 +46,26 @@ ul {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2.4em;
+    padding-left: 2.4em;
+    padding-right: 2.4em;
 
     @include breakpoint-smallest {
-        padding: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
     }
 }
 
 .block-title-container {
     display: flex;
     justify-content: center;
+    margin-bottom: 3.2em;
+
+    @include breakpoint-small {
+        margin-top: 1em;
+    }
 
     @include breakpoint-smallest {
-        margin-bottom: 1.4em;
+        margin-bottom: 2.4em;
     }
 }
 
@@ -70,7 +77,7 @@ ul {
         display: block;
         margin: 1em auto 0 auto;
         width: 80%;
-        height: 2px;
+        height: 4px;
         background-color: $main-color;
     }
 }
@@ -82,9 +89,9 @@ ul {
     opacity: 0;
     visibility: hidden;
     padding: 16px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    background-color: $main-color;
-    color: $dark-color;
+    background-color: $dark-color;
+    border: 1px solid $main-color;
+    color: $main-color;
     font-size: 0.875em;
     transform: translateX(calc(100% + 10px));
     transition: 0.2s opacity, 0.2s visibility, 0.2s transform;

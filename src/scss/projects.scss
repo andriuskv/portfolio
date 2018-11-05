@@ -1,16 +1,7 @@
-.projects {
-    padding-bottom: 2.4em;
-    margin-top: -2em;
-
-    @include breakpoint-small {
-        margin-top: 0;
-    }
-}
-
 .project {
     display: flex;
     align-items: flex-start;
-    padding-top: 2.4em;
+    padding-bottom: 3.2em;
 
     &:nth-of-type(odd) .project-image {
         order: 1;
@@ -59,7 +50,6 @@
     background-color: transparent;
     font-size: 0.875em;
     color: $main-color;
-    letter-spacing: 1px;
     transition: background-color 0.1s, color 0.1s;
 
     &:hover {
