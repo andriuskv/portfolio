@@ -3,9 +3,9 @@
 @media (max-width: 512px) {/* */}
 
 @mixin breakpoint-small {
-    @media (max-width: 768px) { @content; }
+  @media (max-width: 768px) { @content; }
 }
 
 @mixin breakpoint-smallest {
-    @media (max-width: 512px) { @content; }
+  @media (max-width: 512px) { @content; }
 }
