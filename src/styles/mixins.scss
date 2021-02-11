@@ -1,6 +1,6 @@
-// Force css-mqpacker to use correct breakpoint order.
-@media (max-width: 768px) {/* */}
-@media (max-width: 512px) {/* */}
+@mixin breakpoint-medium {
+  @media (max-width: 936px) { @content; }
+}
 
 @mixin breakpoint-small {
   @media (max-width: 768px) { @content; }

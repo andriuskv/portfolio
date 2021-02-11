@@ -1,0 +1,124 @@
+.projects {
+  @include breakpoint-small {
+    padding-top: var(--space-lg);
+  }
+}
+
+.projects-title-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-xxl);
+
+  @include breakpoint-small {
+    margin-bottom: var(--space-xl);
+  }
+}
+
+.projects-title {
+  font-size: var(--text-xxl);
+  text-align: center;
+
+  &::after {
+    content: "";
+    display: block;
+    margin: 1em auto 0 auto;
+    width: 100px;
+    height: 4px;
+    border-radius: 999px;
+    background-color: var(--color-primary);
+  }
+}
+
+.project {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--space-xxl);
+
+  &:nth-of-type(odd) {
+    .project-details {
+      margin-right: auto;
+    }
+
+    .project-image {
+      order: 1;
+      margin-left: var(--space-xl);
+      margin-right: 0;
+
+      @include breakpoint-medium {
+        margin-left: var(--space-lg);
+      }
+
+      @include breakpoint-small {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+    }
+  }
+
+  @include breakpoint-small {
+    display: block;
+    margin-bottom: var(--space-xl);
+  }
+}
+
+.project-image {
+  overflow: hidden;
+  flex-shrink: 0;
+  width: calc(50% + var(--space-lg));
+  margin-left: 0;
+  margin-right: var(--space-xl);
+  border-radius: 8px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.02),
+              0 4px 4px 0 rgba(0, 0, 0, 0.04),
+              0 8px 8px 0 rgba(0, 0, 0, 0.08);
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  @include breakpoint-medium {
+    width: calc(50% + var(--space-md));
+    margin-right: var(--space-lg);
+  }
+
+  @include breakpoint-small {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--space-lg);
+  }
+}
+
+.project-title {
+  font-size: var(--text-xl);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    border-radius: 999px;
+    margin-bottom: var(--space-lg);
+    background-color: var(--color-primary);
+
+    @include breakpoint-smallest {
+      margin-bottom: var(--space-md);
+    }
+  }
+}
+
+.project-description {
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-lg);
+  font-size: var(--text-lg);
+  line-height: 1.5;
+}
+
+.project-links {
+  display: flex;
+}
+
+.project-link {
+  margin-right: var(--space-md);
+}
