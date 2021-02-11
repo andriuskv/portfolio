@@ -1,0 +1,81 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-grey);
+  color: var(--color-white);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include breakpoint-smallest {
+    font-size: 14px;
+  }
+}
+
+h1, h2, h3, h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: inherit;
+  line-height: 1;
+}
+
+svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.container {
+  --h-padding: var(--space-lg);
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: var(--h-padding);
+  padding-right: var(--h-padding);
+
+  @include breakpoint-smallest {
+    --h-padding: var(--space-md);
+  }
+}
+
+.btn {
+  padding: var(--space-sm) var(--space-md);
+  border: 2px solid var(--color-primary);
+  border-radius: 999px;
+  color: var(--color-primary-light);
+  letter-spacing: 0.02em;
+  font-size: 0.875em;
+  font-weight: 500;
+  transition: 0.2s background-color;
+
+  &:hover {
+    background-color: var(--color-primary-20);
+  }
+}
