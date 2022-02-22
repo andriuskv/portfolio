@@ -1,11 +1,13 @@
 :root {
-  --color-primary: hsl(202, 82%, 44%);
-  --color-primary-20: hsla(202, 82%, 44%, 0.2);
-  --color-primary-light: hsl(202, 82%, 60%);
+  --color-primary-100: hsl(202deg 82% 44%);
+  --color-primary-90: hsl(202deg 82% 60%);
+  --color-primary-100-20: hsl(202deg 82% 44% / 20%);
 
-  --color-white: hsl(210, 50%, 98%);
+  --color-secondary-100: hsl(237deg 61% 43%);
 
-  --color-grey: hsl(213, 26%, 17%);
+  --color-white: hsl(210deg 50% 98%);
+
+  --color-grey: hsl(213deg 26% 17%);
 
   --space-unit: 16px;
   --space-sm: calc(0.5 * var(--space-unit));
@@ -15,6 +17,8 @@
   --space-xxl: calc(8 * var(--space-unit));
 
   --text-base-size: 1rem;
+  --text-xs: calc(0.75 * var(--text-base-size));
+  --text-sm: calc(0.875 * var(--text-base-size));
   --text-md: calc(1 * var(--text-base-size));
   --text-lg: calc(1.125 * var(--text-base-size));
   --text-xl: calc(1.375 * var(--text-base-size));

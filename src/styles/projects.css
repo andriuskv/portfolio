@@ -1,5 +1,5 @@
 .projects {
-  @include breakpoint-small {
+  @media (max-width: 768px) {
     padding-top: var(--space-lg);
   }
 }
@@ -9,7 +9,7 @@
   justify-content: center;
   margin-bottom: var(--space-xxl);
 
-  @include breakpoint-small {
+  @media (max-width: 768px) {
     margin-bottom: var(--space-xl);
   }
 }
@@ -25,7 +25,7 @@
     width: 100px;
     height: 4px;
     border-radius: 999px;
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-100);
   }
 }
 
@@ -35,55 +35,49 @@
   margin-bottom: var(--space-xxl);
 
   &:nth-of-type(odd) {
-    .project-details {
+    & .project-details {
       margin-right: auto;
     }
 
-    .project-image {
+    & .project-image-link {
       order: 1;
       margin-left: var(--space-xl);
       margin-right: 0;
 
-      @include breakpoint-medium {
+      @media (max-width: 936px) {
         margin-left: var(--space-lg);
       }
 
-      @include breakpoint-small {
+      @media (max-width: 768px) {
         margin-left: 0;
         margin-right: 0;
       }
-
     }
   }
 
-  @include breakpoint-small {
+  @media (max-width: 768px) {
     display: block;
     margin-bottom: var(--space-xl);
   }
 }
 
-.project-image {
+.project-image-link {
   overflow: hidden;
   flex-shrink: 0;
   width: calc(50% + var(--space-lg));
-  margin-left: 0;
   margin-right: var(--space-xl);
   border-radius: 8px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.02),
-              0 4px 4px 0 rgba(0, 0, 0, 0.04),
-              0 8px 8px 0 rgba(0, 0, 0, 0.08);
+  box-shadow:
+    1px 2px 2px 0 rgb(0 0 0 / 2%),
+    2px 4px 4px 0 rgb(0 0 0 / 4%),
+    4px 8px 8px 0 rgb(0 0 0 / 8%);
 
-  img {
-    display: block;
-    width: 100%;
-  }
-
-  @include breakpoint-medium {
+  @media (max-width: 936px) {
     width: calc(50% + var(--space-md));
     margin-right: var(--space-lg);
   }
 
-  @include breakpoint-small {
+  @media (max-width: 768px) {
     display: block;
     width: 100%;
     margin-bottom: var(--space-lg);
@@ -100,9 +94,9 @@
     height: 4px;
     border-radius: 999px;
     margin-bottom: var(--space-lg);
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-100);
 
-    @include breakpoint-smallest {
+    @media (max-width: 512px) {
       margin-bottom: var(--space-md);
     }
   }
@@ -120,5 +114,11 @@
 }
 
 .project-link {
+  display: flex;
+  align-items: center;
   margin-right: var(--space-md);
+}
+
+.project-link-icon {
+  margin-right: var(--space-sm);
 }
