@@ -54,7 +54,6 @@
 }
 
 .header-title-intro {
-  /* font-weight: normal; */
   font-size: var(--text-xxl);
   letter-spacing: -0.04rem;
 }
@@ -111,5 +110,10 @@
 
   &:hover, &:focus-visible {
     transform: translateY(-2px);
+  }
+
+  & svg {
+    width: 28px;
+    height: 28px;
   }
 }

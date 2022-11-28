@@ -85,7 +85,7 @@
 }
 
 .project-title {
-  font-size: var(--text-xl);
+  font-size: var(--text-xxl);
 
   &::before {
     content: "";
