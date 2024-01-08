@@ -1,27 +1,41 @@
 :root {
   --color-primary-100: hsl(202deg 82% 44%);
   --color-primary-90: hsl(202deg 82% 60%);
-  --color-primary-100-20: hsl(202deg 82% 44% / 20%);
+  --color-primary-100-a10: hsl(202deg 82% 44% / 10%);
 
   --color-secondary-100: hsl(237deg 61% 43%);
 
-  --color-white: hsl(210deg 50% 98%);
+  --color-white: hsl(202deg 50% 98%);
+  --color-white-a2: hsl(202deg 50% 98% / 2%);
+  --color-white-a4: hsl(202deg 50% 98% / 4%);
+  --color-white-a90: hsl(202deg 50% 98% / 90%);
 
   --color-grey: hsl(213deg 26% 17%);
 
+  --color-black-a2: hsl(0deg 0% 0% / 2%);
+  --color-black-a4: hsl(0deg 0% 0% / 4%);
+  --color-black-a8: hsl(0deg 0% 0% / 8%);
+
   --space-unit: 16px;
-  --space-sm: calc(0.5 * var(--space-unit));
+  --space-xxs: calc(0.25 * var(--space-unit));
+  --space-xs: calc(0.5 * var(--space-unit));
+  --space-sm: calc(0.75 * var(--space-unit));
   --space-md: calc(1 * var(--space-unit));
   --space-lg: calc(2 * var(--space-unit));
   --space-xl: calc(4 * var(--space-unit));
   --space-xxl: calc(8 * var(--space-unit));
 
   --text-base-size: 1rem;
-  --text-xs: calc(0.75 * var(--text-base-size));
-  --text-sm: calc(0.875 * var(--text-base-size));
-  --text-md: calc(1 * var(--text-base-size));
-  --text-lg: calc(1.125 * var(--text-base-size));
-  --text-xl: calc(1.375 * var(--text-base-size));
-  --text-xxl: calc(1.5 * var(--text-base-size));
-  --text-xxxl: calc(2.25 * var(--text-base-size));
+  --text-xxs: calc(0.75 * var(--text-base-size));
+  --text-xs: calc(0.875 * var(--text-base-size));
+  --text-sm: calc(1 * var(--text-base-size));
+  --text-md: calc(1.125 * var(--text-base-size));
+  --text-lg: calc(1.5 * var(--text-base-size));
+  --text-xl: calc(2 * var(--text-base-size));
+  --text-xxl: calc(2.75 * var(--text-base-size));
+
+  --highligh-shadow:
+    1px 2px 2px 0 var(--color-black-a8),
+    2px 4px 4px 0 var(--color-black-a4),
+    4px 8px 8px 0 var(--color-black-a2);
 }
