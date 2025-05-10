@@ -165,6 +165,7 @@
   max-width: 35ch;
   margin-top: var(--space-md);
   margin-left: var(--space-sm);
+  text-wrap-style: pretty;
   font-size: var(--text-md);
   line-height: 1.25;
   letter-spacing: -0.02rem;

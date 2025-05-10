@@ -162,6 +162,7 @@
 .project-description {
   margin-top: var(--space-md);
   margin-bottom: var(--space-lg);
+  text-wrap-style: pretty;
   font-size: var(--text-sm);
   line-height: 1.5;
 }
